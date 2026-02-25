@@ -1,0 +1,1 @@
+"C:\Users\Administrator.NCR\Desktop\NCR_CHATBOT" && venv\Scripts\activate && python run bot_sv-rev2.py

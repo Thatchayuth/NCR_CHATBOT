@@ -1,0 +1,6 @@
+pandas
+openpyxl
+pyodbc
+python-dateutil
+fastapi
+uvicorn[standard]

@@ -1,0 +1,1 @@
+D: &&cd D:\LLM\NCR_CHATBOT && python rag_manager_new.py

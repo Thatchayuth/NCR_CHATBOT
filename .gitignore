@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ChromaDB persistence (large binary files)
+last_persist_db_qwen_ollama_rev3/
+for_recovery/backup/last_persist_db_qwen/
+for_recovery/backup/last_persist_db_qwen_ollama_rev2/
+for_recovery/backup/last_persist_db_qwen_ollama_rev2_Prototype/
+for_recovery/backup/last_persist_db_qwen_ollama_rev3_backup/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
