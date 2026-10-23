@@ -25,3 +25,6 @@ for_recovery/backup/last_persist_db_qwen_ollama_rev3_backup/
 # OS
 Thumbs.db
 .DS_Store
+
+# DB password (kept in E:\ENVProject)
+module/db_config.py
