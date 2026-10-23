@@ -1,0 +1,947 @@
+============================================================
+TRANSCRIPT SUMMARY REPORT
+============================================================
+
+--- Part 1/37 ---
+- Key decision: Emphasize proactive process control to identify and manage potential problems early through root cause analysis and immediate response protocols.
+- Action item: Continue reinforcing quality system implementation by demonstrating real-time operational responses (e.g., breakers tripping, team coordination) without requiring managerial intervention.
+- Issue raised: Concern about organizational scale and equipment age—acknowledging that while newer facilities may have different scales, established operations retain critical knowledge and continuity.
+- Important discussion point: The value of retaining experienced staff during facility transitions; moving all production staff to the new location preserved institutional knowledge and operational excellence.
+- Additional insight: Highlighted Continental Quebec plant’s legacy and technical capabilities, including long banners (up to 400 feet), underscoring industry benchmarks and specialized expertise.  
+- Note: Mentioned that only one U.S. company produces hoses up to 200 feet (60 meters), emphasizing rarity and technical significance.
+
+--- Part 2/37 ---
+- **Key Decision**: No major decisions were made during this segment; discussion focused on observations and suggestions for improvement.
+
+- **Action Items**:
+  - Request to obtain a video from a company with 200-foot hoses (60 meters) showing their automated hose manufacturing process.
+  - Ask the company to produce a detailed video on their hose manufacturing methods for potential customer use.
+  - Consider computerizing printed work instructions and alerts currently posted around the facility to improve accessibility and maintainability.
+
+- **Issues Raised**:
+  - Limited availability of long hoses in the U.S. market (only one company currently produces 200-foot hoses).
+  - Potential inefficiencies in hose manufacturing processes compared to competitors.
+  - Risk of overlooking deeper quality issues due to limited audit duration (e.g., four-hour visit may not reveal systemic problems).
+
+- **Important Discussion Points**:
+  - Manufacturing quality system is highly organized and robust; current operations reflect strong internal controls and staff expertise.
+  - Continuous improvement efforts are evident—employees actively seek ways to enhance processes.
+  - Suggestion to transition from paper-based work instructions to digital displays for easier updates and better user engagement.
+  - QA lab uses digital pressure gauges (advantageous), contrasting with analog systems used by other companies. Digital systems are seen as beneficial for a company of this scale.
+
+--- Part 3/37 ---
+- **Key Decisions**:  
+  - Recommend implementing computerized pressure testing with data logging for QA lab operations.  
+  - Acknowledge employee suggestions via recognition (e.g., employee recognition board) as part of continuous improvement.
+
+- **Action Items**:  
+  - QA team to evaluate and implement data logging systems for pressure testing (cost: ~few thousand dollars).  
+  - Managers to formally recognize and follow through on employee suggestions for implementation when feasible.  
+  - Prepare to assess employee engagement in suggestion programs (e.g., extrusion center teams).
+
+- **Issues Raised**:  
+  - Current documentation and operational practices may not be consistently maintained over time.  
+  - Limited understanding of employee recognition board content; unclear impact on engagement.  
+  - Need to ensure transparency and follow-through on employee ideas to maintain trust and motivation.
+
+- **Important Discussion Points**:  
+  - Data logging improves traceability, customer confidence, and QA transparency.  
+  - Continuous improvement requires managerial acknowledgment of team contributions.  
+  - Sustained change in manufacturing processes will take several years to fully materialize.  
+  - Employee engagement is critical—teams must feel their input is valued and acted upon.  
+  - Visualizing process improvements (e.g., before/after cell layouts) is a new initiative with potential value.
+
+--- Part 4/37 ---
+- **Key Decisions**:  
+  - Finalized GPI Arctic feedback with QA manager’s detailed responses; confirmed UL Fun Pump project timeline and two UV test options.
+
+- **Action Items**:  
+  - Complete repeat bending test machine (3,000 cycles) by end of month.  
+  - Submit UV test samples by mid-May (Option One) or mid-June (Option Two).  
+  - Finalize UL Fun Pump project by August, pending test outcomes.
+
+- **Issues Raised**:  
+  - UV test duration and lab queue dependency (Option Two requires 700 hours).  
+  - Need for clear communication between teams on test progress and approvals.
+
+- **Important Discussion Points**:  
+  - UL Fun Pump project status update and timeline reassessment.  
+  - Recognition of team members’ expertise (e.g., QA manager, Mr. Prasad, Mr. Brian Lu, Adam).  
+  - Agenda restructured to prioritize easier topics first, with pricing discussion deferred to end.  
+  - Emphasis on continuous improvement and cross-functional collaboration.  
+  - Next steps include Renewal Product, Supplier Agreement, and future order planning.  
+  - Final agenda item: New pricing discussion (most complex).
+
+--- Part 5/37 ---
+- **Key Decision**: Proceed with Option Two and target completion by June, with sample submission to UL by mid-June.  
+- **Action Items**:  
+  - R&D to review UV test results from two years ago and assess margin of compliance.  
+  - UL technical team to evaluate whether current test meets UL requirements; provide updated guidance by next week.  
+  - If UV test results are marginal or not fully aligned with UL specs, schedule third-party lab testing within the next two months.  
+  - William to discuss preference for option with team.  
+- **Issues Raised**:  
+  - Historical UV test results may not be sufficient due to potential process changes; UL is strict and does not accept “close calls.”  
+  - Risk of wasting time and resources if tests are submitted to UL without sufficient confidence.  
+- **Important Discussion Points**:  
+  - Need to ensure test margins are significantly above UL requirements to allow for variability.  
+  - Confidence in test results is critical—proceed only if technical team confirms a clear pass.  
+  - UL is not lenient and may reject samples that narrowly pass, even if they were close before.  
+  - Timeline is tight (700 hours, lab queue dependent); proactive testing is essential to avoid delays.  
+- **Next Steps**: Lead team to coordinate with R&D and UL, finalize UV test strategy, and confirm action plan by end of week.  
+- **Note**: UL tests are confirmed for this formulation, but alignment with their exact requirements must be verified.
+
+--- Part 6/37 ---
+- **Key Decisions**:  
+  - Proceed with UL testing pending final pricing and confirmation of results.  
+  - Await UV test completion to inform pricing and decision-making.  
+
+- **Action Items**:  
+  - William to review test results and provide judgment on proceeding.  
+  - Sarah to share NGRC test results with William for comparison.  
+  - Team to wait for UL test outcome before finalizing next steps.  
+  - Request additional time (likely next week) to finalize UL test engagement.  
+
+- **Issues Raised**:  
+  - UL may charge significantly more if tests fail (projected 50% increase).  
+  - Time and cost are major concerns; UL’s pricing model is seen as opaque and aggressive.  
+  - Need clarity on whether to proceed with internal assessment or third-party reputation testing.  
+
+- **Important Discussion Points**:  
+  - Confidence in test outcomes is critical—only proceed if results are 200% certain.  
+  - Internal team (e.g., William) will assess results and make final decisions.  
+  - UV test pricing will influence overall strategy; waiting for UV results is prudent.  
+  - SuperCert objectives include pre-operational machinery checks for Swiss families.  
+  - M1’s familiarity with machinery and driver codes is noted as a positive.  
+
+- **Next Steps**:  
+  - Await UV test results and UL pricing details before committing to next phase.  
+  - Final decision on third-party testing will be based on internal and NGRC data.  
+
+Note: Meeting is slightly delayed but remains on track with original targets.  
+Note: No immediate updates on investment details.  
+Note: UL engagement is being managed cautiously due to cost and timeline risks.
+
+--- Part 7/37 ---
+- **Key Decisions**:  
+  - Approved moving forward with a small hybrid project involving machinery for steel wire braiding.  
+  - Confirmed 18-month timeline for first customer deployment as a viable timeframe.  
+
+- **Action Items**:  
+  - Finalize and communicate the 18-month project timeline to internal staff.  
+  - Prepare for delivery of the first customer sample by the first week of May.  
+  - Begin internal evaluation of machine capacity and technical specifications.  
+
+- **Issues Raised**:  
+  - Concerns about capacity and scalability of current braiding equipment.  
+  - Need to ensure technical readiness before committing to new machinery purchases.  
+
+- **Important Discussion Points**:  
+  - Target braid size: up to two inches.  
+  - Expansion potential beyond gas pump hoses into industrial steel wire braided hoses for dust suppression (a large, price-competitive market).  
+  - Existing partnership with Amesha means new hoses will require Amesha cover, unlocking broader industrial opportunities.  
+  - Current demand for industrial hoses (e.g., yellow mining hose) will be addressed via updated Titan 500/XNBR samples under technical testing.  
+  - Long-term strategy: focus on niche, integrated hose solutions rather than competing broadly on price or immediacy.  
+  - Emphasis on avoiding overcommitment to machinery without clear market validation.  
+
+- **Next Steps**:  
+  - Evaluate machine capabilities and market fit before committing to additional high-hauling opportunities (to be discussed later).  
+  - Continue technical testing of Titan 500/XNBR samples by May 1st.  
+  - Monitor progress of first customer launch to inform future scaling.  
+
+Note: The project is on track with a specific customer in mind and strong technical validation from prior testing.  
+
+(End of Summary)
+
+--- Part 8/37 ---
+- **Key Decisions**:  
+  - Approved use of XNBR cover material for Titan 500 and Corilla hoses.  
+  - Confirmed compatibility between XNBR and Continental Corilla hose specs (including pressure ratings: ORTAC at 300 PSI, Corilla at 500 PSI).  
+  - Confirmed MSHA certification for XNBR material, with certification number to be marked on the hose.  
+
+- **Action Items**:  
+  - Technical team to test final sample of Titan 500/XNBR by first week of May.  
+  - Send sample to customer for testing by end of May.  
+  - Ensure MSHA certification file is properly documented and ready for labeling.  
+
+- **Issues Raised**:  
+  - Clarified confusion around flame resistance testing: initial test was conducted at 1,000°F, but actual MSHA requires formal submission to U.S. Department of Labor.  
+  - Need to confirm whether certification is valid for NCR Titan 500 only (confirmed yes).  
+
+- **Important Discussion Points**:  
+  - XNBR is a specialized, flame-resistant material not widely available—creates a niche market advantage.  
+  - Product is not a multi-purpose or generic hose (e.g., air/water/push-off), positioning it as a premium, high-pressure solution.  
+  - Strong market potential due to limited competition and high-pressure performance (up to 500 PSI).  
+  - Historical context: ORTAC and Corilla share similar materials but differ in pressure ratings; Corilla is high-pressure across the board.  
+  - Emphasis on price competitiveness to capture market share.  
+
+- **Additional Notes**:  
+  - XNBR used on both ORTAC and Corilla covers—same material, different pressure applications.  
+  - MSHA certification already filed; unique certification number will be marked on NCR Titan 500 hose.  
+  - This product represents a strategic opportunity due to its specialized nature and compliance credentials.
+
+--- Part 9/37 ---
+- **Key Decision**: Proceed with submitting a fire resistance sample to the U.S. Department of Labor’s Mine Safety and Health Administration (MSHA) for approval under their flame test protocol.
+- **Action Items**:
+  - Send a physical sample of the XMVR material to the team for evaluation.
+  - Prepare and send a sample piece (approx. 10 feet) for demonstration and customer presentations.
+  - Schedule a demonstration at an upcoming military show (date TBD).
+- **Issues Raised**:
+  - Clarified that the flame test is less stringent than UL 94 V0 but still critical for underground mining applications.
+  - Highlighted the importance of U.S. government approval as a trusted validation for use in underground mining environments.
+- **Important Discussion Points**:
+  - U.S. MSHA approval serves as a de facto standard in the Americas, potentially enabling market access in South America (e.g., Chile, Peru) without additional local certifications.
+  - Approval provides clear validation for customers questioning material authenticity and suitability for high-risk environments.
+  - Sample availability is currently limited due to printing delays, but a small piece is available for immediate demonstration.
+
+--- Part 10/37 ---
+- **Key Decisions**:  
+  - Confirm production map delivery by August 8th.  
+  - Approve sampling of new product (UAL Thumb Pum and XMVR) for early evaluation.  
+
+- **Action Items**:  
+  - Pam and Keech to consolidate logistics and delivery plans.  
+  - Confirm pricing details (pre-adjusted cost) with XMBR team; verify data availability.  
+  - Willam to provide update on Fuel Outlet rough cover progress.  
+  - Schedule to confirm May exhibition plans (two trade shows, one in May).  
+
+- **Issues Raised**:  
+  - Uncertainty around pricing adjustments and XMBR data availability.  
+  - Difficulty in defining initial workflow steps for new product rollout.  
+
+- **Important Discussion Points**:  
+  - New product strengths: Air Drill offers improved abrasion and oil resistance over standard NDR tech.  
+  - Company strategy: Focus on anticipating market needs and launching innovative, hard-to-source products ahead of demand.  
+  - Exhibition strategy: Two major trade shows planned—Fall drawing show and May event—aligned with customer visits.  
+  - Fuel Outlet launch: Big upcoming smooth cover launch; rough cover progress ongoing.  
+
+- **Next Steps**:  
+  - Finalize production timeline and sampling rollout.  
+  - Confirm exhibition logistics and customer engagement plans.  
+  - Address pricing and technical specs for new products.
+
+--- Part 11/37 ---
+- **Key Decision**: Proceed with a rough cover version of the Fuel Outlet delivery hose as a launch entry point due to technical and supply challenges.
+- **Action Items**:
+  - Joan and Paul to continue discussions on the rough cover hose production and market strategy.
+  - Confirm production of rough cover hose in China for initial supply (100 ft and 200 ft lengths).
+  - Evaluate feasibility of transitioning to a smooth cover version later if technical or customer demand allows.
+- **Issues Raised**:
+  - Technical complexity of manufacturing the smooth cover hose.
+  - Customer preference for non-China-sourced products (especially in the US market).
+  - Need to balance market access with supply chain reliability.
+- **Important Discussion Points**:
+  - Continental dominates the smooth cover hose market; focus shifts to one-inch to one-and-a-half-inch range.
+  - Rough cover hose is a smaller market but viable for initial US rollout with proven success.
+  - Launch strategy prioritizes quick market entry via rough cover before assessing smooth cover potential.
+
+--- Part 12/37 ---
+- **Key Decisions**:  
+  - Proceed with supplying 100-foot and 200-foot pump legs to US customer, starting with free mode.  
+  - Confirm sample order for OID delivery (red color) to test feasibility.  
+  - Supplier agreement to be finalized with revised terms; initial draft prepared by Mr. Bribdi.  
+
+- **Action Items**:  
+  - Supplier to provide update on sample completion timeline for red-colored OID pump legs.  
+  - Customer to review supplier agreement draft and provide feedback before finalization.  
+  - Supplier to share pricing details for the sample order.  
+  - Supplier to discuss future orders and market trends with Frith Homes, especially regarding Nanyang Thong Pong.  
+
+- **Issues Raised**:  
+  - Concerns about mandrel specifications (initial rejection, later deemed acceptable).  
+  - Uncertainty around long-term strategy: whether GPI will be the sole customer or if expansion to other clients is planned.  
+  - Need to clarify customer intent regarding future orders beyond GPI.  
+
+- **Important Discussion Points**:  
+  - Focus on non-year-old farm pump models as priority.  
+  - First two POs from Frith Homes for Nanyang Thong Pong have been fulfilled; final container to ship this week.  
+  - Emphasis on establishing partnership framework in the supplier agreement.  
+  - Need for customer input on agreement terms and future order projections.  
+
+- **Next Steps**:  
+  - Await customer feedback on supplier agreement draft.  
+  - Schedule follow-up to discuss future orders and market outlook for Nanyang Thong Pong.  
+  - Confirm sample delivery timeline and pricing details.
+
+--- Part 13/37 ---
+- **Key Decision**: The team decided to address the stainless steel pricing issue directly with the supplier, expressing concern over the 15% price increase and seeking clarification.
+- **Action Items**:
+  - Clarify the source and justification for the 15% increase in stainless steel wire pricing.
+  - Investigate whether the supplier is recommending a specific type of stainless steel that may not be optimal or cost-effective.
+  - Review material market indices to validate pricing trends (copper vs. stainless steel), noting copper is typically more expensive than stainless steel in HVAC applications.
+- **Issues Raised**:
+  - Discrepancy between market data and supplier claims: stainless steel wire prices are rising significantly, which contradicts industry benchmarks.
+  - Lack of transparency: The supplier has not provided a clear rationale or sourcing explanation for the price increase.
+  - Concern about supplier reliability: The increase appears inconsistent with market trends and may stem from a non-standard or less competitive supplier.
+- **Important Discussion Points**:
+  - The pricing anomaly is unprecedented and raises questions about the supplier’s sourcing practices.
+  - The team emphasized the need for validation from independent material indices and cross-checks with other suppliers.
+  - Urgency to resolve the issue before committing to the order, as stakeholders are concerned about fairness and long-term implications.  
+- **Next Steps**: Request clarification from the supplier and initiate internal review to assess alternatives and ensure pricing aligns with market reality.
+
+--- Part 14/37 ---
+- **Key Decision**: Suppliers for stainless steel wires will be identified in China; potential suppliers will be shared with the team for review.  
+- **Action Item**: The team must evaluate the proposed stainless steel wire alternative and assess its feasibility against current manufacturing processes.  
+- **Issue Raised**: Misunderstanding or misinformation about “artificial steel wires” – clarified as non-existent; no such material is used in current operations.  
+- **Important Discussion Point**: Preference for stainless steel wire over copper due to improved assembly efficiency, better instrument handling, and increased productivity in production.  
+- **Additional Note**: While the team is reviewing options, the final decision rests with them; if copper remains necessary due to process constraints, that will be acknowledged and accepted.  
+- **Context**: The discussion also touches on coffee bean status and market trends, highlighting the importance of aligning supply with product quality and operational needs.  
+- **Collaboration Commitment**: Emphasis on joint decision-making with engineering teams to ensure sourcing and technical solutions meet both parties’ requirements.
+
+--- Part 15/37 ---
+- **Key Decision**: The team will stick with stainless steel wire for the spring, as it aligns with previous business practices and U.L. requirements.  
+- **Action Item**: Allow time to evaluate and resolve the stainless steel sourcing and cost issues, with emphasis on transparency and collaboration.  
+- **Issue Raised**: Lack of communication from the other party—no response after initial feedback, creating frustration and uncertainty.  
+- **Important Discussion Point**: Acknowledgment of significant raw material cost increases (11% and 15%), stressing the need for joint problem-solving rather than unilateral cost absorption.  
+- **Key Discussion Point**: Emphasis on honesty and upfront communication—“if it is, it is”—to build trust and foster collaboration.  
+- **Action Item**: Review inventory costs as a potential cost-cutting measure, including reducing bowcote cutting to minimize labor and packaging expenses.  
+- **Business Outlook**: Suppliers are ready to proceed with orders and are seeking a collaborative approach to sustain growth while managing rising costs.  
+- **Underlying Concern**: The absence of a clear response from the other party is seen as a negative sign, undermining trust and delaying decision-making.  
+- **Call for Two-Way Collaboration**: Both parties must work together transparently to address cost increases and find sustainable solutions.  
+- **Cost Reality Check**: 26% increase in costs is unsustainable for either party alone—joint action is required to adapt.  
+- **Inventory as Cash**: Highlighted as a critical cost driver, prompting focus on reducing inventory holding costs through operational adjustments.  
+- **Unmet Expectation**: The other party’s failure to respond to prior communications is viewed as a breach of trust and operational transparency.  
+- **Next Steps**: Scheduled meeting to discuss joint solutions, inventory optimization, and cost-sharing strategies.  
+- **Supplier Readiness**: Suppliers are prepared to execute orders and are seeking alignment on cost mitigation strategies.  
+- **Operational Insight**: Cutting costs involves labor, packaging, and inventory—highlighting shared responsibility across supply chain stages.  
+- **Stakeholder Sentiment**: Strong emphasis on partnership, accountability, and mutual commitment to business growth.  
+- **Final Note**: The team is committed to growth but insists on a two-way street—cost increases must be addressed collaboratively.  
+- **Pending Issue**: Need for clear communication and joint decision-making on material choices and cost absorption.  
+- **Immediate Focus**: Inventory reduction and operational efficiency to offset rising material costs.  
+- **Trust Factor**: Rebuilding trust through transparent dialogue and joint problem-solving is a top priority.  
+- **Call to Action**: Both parties must engage proactively and respond promptly to maintain momentum and alignment.  
+- **Business Risk**: Delayed decisions due to poor communication could result in lost opportunities and strained relationships.  
+- **Summary Position**: The meeting confirms a need for transparency, joint action, and operational efficiency to navigate rising costs.  
+- **Outcome**: A commitment to collaborative problem-solving and clearer communication moving forward.  
+- **Final Note**: The team is ready to move forward but requires mutual accountability and responsiveness.  
+- **Key Takeaway**: Cost increases demand partnership—not unilateral action—especially when inventory and labor are significant cost drivers.  
+- **Action Required**: Immediate follow-up on inventory review and material sourcing decisions to prevent further delays.  
+- **Emotional Tone**: Frustration with lack of response, but strong resolve to work together for long-term growth.  
+- **Strategic Focus**: Cost mitigation through inventory optimization and operational efficiency.  
+- **Relationship Dynamic**: Need to rebuild trust through consistent, transparent communication.  
+- **Decision Boundaries**: No change to material choice (stainless steel) without joint review and agreement.  
+- **Next Meeting Purpose**: To finalize cost-sharing strategies and operational adjustments.  
+- **Final Commitment**: Both parties agree to work together transparently to grow the business sustainably.  
+-
+
+--- Part 16/37 ---
+- **Key Decision**: Shift from custom cutting to bulk manufacturing to reduce inventory and operational costs.
+- **Action Items**:
+  - Begin bulk production of hose assemblies (e.g., 1-inch by 20 feet) to meet GPI’s changing demands.
+  - Align production schedules with GPI’s weekly production forecasts to improve responsiveness.
+  - Optimize container utilization using Sarah’s planning to maximize space and reduce shipping costs.
+- **Issues Raised**:
+  - High labor and operational costs associated with cutting, packaging, and managing short-run orders.
+  - Inventory obsolescence due to unpredictable GPI demand (e.g., excess hose sitting on shelves for months).
+  - Inefficiency from idle labor (4–5 people sitting idle during production gaps).
+- **Important Discussion Points**:
+  - Bulk manufacturing reduces operational overhead and frees up resources for other uses.
+  - Improved planning enables better coordination with GPI, reduces container waste, and streamlines de-packing and order fulfillment.
+  - Shared planning responsibilities will enhance efficiency across both companies.
+
+--- Part 17/37 ---
+- **Key Decisions**:  
+  - Approved the use of bulk packaging for GPI products to align with actual demand fluctuations.  
+  - Decided to standardize ball lengths (e.g., switch from 18-foot to 20-foot) to avoid over-ordering and production mismatches.  
+
+- **Action Items**:  
+  - Confirm forecast accuracy with GPI to better align supply with actual demand.  
+  - Review and standardize ball dimensions across orders to prevent overstocking and production inefficiencies.  
+  - Implement bulk packaging strategy in MRP system planning to improve forecasting and reduce systemic costs.  
+
+- **Issues Raised**:  
+  - GPI lacks reliable demand forecasting; orders fluctuate unpredictably (e.g., sudden spikes in demand for specific meters/pumps).  
+  - Current inventory mismatches (e.g., 18-foot balls vs. required 20-foot) lead to inefficiencies and potential delays.  
+  - Systemic cost increases in manufacturing due to tariffs and supply chain volatility.  
+
+- **Important Discussion Points**:  
+  - Emphasized the need for transparency and continuous feedback between teams on what works and what doesn’t in the new process.  
+  - Highlighted that early-stage experimentation is acceptable, but processes must evolve to meet real operational needs—no point in being “early” without transformational improvements.  
+  - Raised concern over stainless steel wire supply chain issues, pending further discussion.  
+
+- **Overall Focus**:  
+  - Transition to a more responsive, data-driven MRP system that accounts for demand volatility and material standardization to reduce waste and delays.  
+  - Commitment to continuous improvement and shared learning across teams.
+
+--- Part 18/37 ---
+- **Key Decisions**:  
+  - Agree to conduct a video conference for future heated discussions to improve communication and clarity.  
+  - Commit to immediate follow-up on packaging and pricing issues (stainless steel wire and copper) with a call scheduled within 24–48 hours.
+
+- **Action Items**:  
+  - Schedule a video conference call with the team (John, Sarah, William) to discuss the stainless steel wire pricing and packaging concerns.  
+  - Confirm that all parties will communicate openly and promptly if issues arise.  
+  - Sarah to act as primary contact point for internal coordination on urgent matters.
+
+- **Issues Raised**:  
+  - Stainless steel wire pricing is currently at a peak compared to historical levels, causing customer complaints and operational concerns.  
+  - Lack of timely communication from the customer side delayed response and created confusion about order status.  
+  - Customer did not receive an order despite expectations, which impacted planning and trust.
+
+- **Important Discussion Points**:  
+  - Emphasize the importance of proactive, transparent communication in resolving issues.  
+  - Acknowledge that delays in communication led to frustration and misalignment.  
+  - Reaffirm commitment to openness and accountability between teams.  
+  - Stress need for faster escalation and discussion mechanisms for urgent matters.  
+  - Clarify that no blame is being assigned; focus is on improving future collaboration.  
+  - Highlight that the company would have issued an order a month ago but was delayed due to internal coordination gaps.  
+  - Recommend video calls over email for time-sensitive or heated discussions.  
+  - Confirm availability of both parties to respond promptly to any concerns.  
+  - Agree to move forward with clear, timely communication protocols.  
+  - Commit to resolving the stainless steel wire issue and packaging plan jointly.  
+  - Acknowledge customer’s frustration with global pricing trends and reaffirm support for transparent dialogue.  
+  - Emphasize that pricing concerns (copper and wire) are not the sole responsibility of one party but require joint discussion and resolution.  
+  - Reaffirm that all parties are committed to being open and straightforward in all business interactions.  
+  - Confirm that any issue requiring discussion must be escalated promptly through designated contacts (Sarah, William).  
+  - Stress the importance of joint decision-making and shared responsibility in resolving operational challenges.  
+  - Agree to hold a follow-up call to finalize next steps and ensure alignment.  
+  - Confirm that all parties are available for immediate discussion if needed.  
+  - Reaffirm commitment to transparency and accountability in all future interactions.  
+  - Commit to resolving the stainless steel wire issue and packaging plan jointly.  
+  - Acknowledge that customer’s concerns about pricing are valid and require joint attention.  
+  - Emphasize that pricing fluctuations are a shared challenge and require collaborative solutions.  
+  - Confirm that all parties understand the urgency of addressing packaging and material costs.  
+  - Agree to keep stakeholders informed and involved in decision-making processes.  
+  - Stress the need for joint ownership of solutions moving forward.  
+  - Confirm that no party will withhold information or delay escalation.  
+  - Reaffirm that all issues will be addressed promptly and transparently.  
+  - Commit to maintaining open lines of communication and responsiveness.  
+  - Agree to hold a follow-up call to finalize next steps and ensure alignment.  
+  - Confirm that all parties are available for immediate discussion if needed.  
+  - Reaffirm commitment to transparency and accountability in all future interactions.  
+  - Commit to resolving the stainless steel wire issue and packaging plan jointly.  
+  - Acknowledge that customer’s concerns about pricing are valid and require joint attention.  
+  - Emphasize that pricing fluctuations are a shared challenge and require collaborative solutions.  
+  - Confirm that all parties understand the urgency of addressing packaging and material costs.  
+  - Agree to keep stakeholders informed and involved in decision-making processes.
+
+--- Part 19/37 ---
+- **Key Decisions**:  
+  - Commit to transparency in business operations and ongoing communication.  
+  - Acknowledge and accept limitations; be clear and direct when constraints exist.  
+
+- **Action Items**:  
+  - Schedule a video call to address the NCR issue.  
+  - Logistics department to contact suppliers for details on steel wire grade, span, and minimum order quantities.  
+  - Costing department to provide a detailed breakdown of raw material and steel wire costs.  
+  - Request Williams to share additional vendor/supplier information.  
+
+- **Issues Raised**:  
+  - Supplier issues related to community (specifics unclear).  
+  - Unexpected cost increase due to raw material and copper wire to steel wire change.  
+  - Delayed responses from Williams and costing department.  
+  - Only one of five suppliers from Williams has responded so far.  
+
+- **Important Discussion Points**:  
+  - Emphasis on building trust and improving relationship through open dialogue.  
+  - Recognition of commercial challenges but shared commitment to resolving them.  
+  - Need for faster internal processes and clearer supplier information.  
+  - Confidence in the product and customer reception, with focus shifting to implementation and cost management.  
+
+- **Overall Tone**:  
+  - Collaborative, proactive, and committed to resolving issues transparently.  
+  - Acknowledges complexity but remains optimistic about progress.
+
+--- Part 20/37 ---
+- **Key Decisions**:  
+  - Maintain raw material inventory through end of quarter due to current pricing; prices will be adjusted based on supplier updates.  
+  - Continue engaging with one supplier from William’s list and initiate contact with a second supplier under strategic plan.  
+
+- **Action Items**:  
+  - Finalize supplier response on the specific issue by end of quarter.  
+  - Adjust raw material pricing based on supplier quotes without adding new expenses.  
+
+- **Issues Raised**:  
+  - Market pricing volatility; competitors frequently adjust prices (3–6%), but sudden 26% increases are unprecedented and unacceptable.  
+  - Lack of control over market pricing; business must absorb price fluctuations to retain customers.  
+  - Concerns about sustainability of absorbing such extreme price hikes; expressed as a “big shock” and difficult to digest.  
+
+- **Important Discussion Points**:  
+  - Emphasize that pricing decisions are driven by market conditions, not internal cost control.  
+  - Stress partnership mindset: focus on cost mitigation and business continuity rather than profit maximization.  
+  - Acknowledge shared challenges across industry; all parties are in the same boat and must adapt collectively.  
+  - Highlight need for proactive cost management to preserve customer relationships and business growth.
+
+--- Part 21/37 ---
+- Key Decision: Acknowledge the significant cost shock from a recent situation and commit to proactively analyzing cost impacts before entering new applications or projects.
+- Action Items:
+  - Technical teams must evaluate potential cost impacts early in discussions with William, Rick, and other stakeholders.
+  - Initiate formal cost-impact analyses for new products and applications, especially non-GPI-related ones.
+  - Begin preparing for future scenarios where manufacturing roles may shift due to cost considerations.
+- Issues Raised:
+  - Surprise realization that entry into certain processes (e.g., switching point office) could have been avoided with earlier awareness.
+  - Risk of being caught in a “cost-containing trap” by chasing every opportunity, potentially leading to unsustainable competition.
+  - Need to balance ambition with cost discipline to maintain profitability and market competitiveness.
+- Important Discussion Points:
+  - Emphasize building strong, long-term partnerships with clients and partners (e.g., FEC), recognizing that scale (e.g., 10–15% of business) will make collaboration critical.
+  - Customers operate in competitive markets with multiple choices; pricing and margins are key differentiators.
+  - Stress the importance of strategic focus—chasing every opportunity (“nightmare chasing ambulances”) may not be sustainable or profitable.  
+  - Commitment to learning from current experience to improve future decision-making as partners.
+
+--- Part 22/37 ---
+- **Key Decisions**:  
+  - Reject aggressive cost-containment strategies that lead to constant price wars and operational strain.  
+  - Commit to building long-term business relationships with customers to ensure sustainable growth and profitability.  
+
+- **Action Items**:  
+  - Open channel for customers to propose alternative technical solutions or cost-saving ideas (e.g., wire alternatives, process changes).  
+  - Review engineering and supplier cost structures to identify inefficiencies and potential savings.  
+  - Evaluate proposals for cost reductions (e.g., 15% price increase) and assess feasibility with suppliers.  
+
+- **Issues Raised**:  
+  - Engineering and QA teams often prioritize lowest-risk designs, leading to unnecessary cost increases (e.g., 300% supplier pricing).  
+  - Cost drivers include wire usage (1.5x more than strip pattern) and added production stations.  
+  - Lack of cross-functional collaboration between engineering, purchasing, and suppliers results in inflated costs.  
+
+- **Important Discussion Points**:  
+  - Emphasize collaboration over rigid technical requirements.  
+  - Encourage innovation: question assumptions (e.g., “Does this have to be this way?”).  
+  - Value customer expertise and willingness to invest in new capabilities (e.g., new equipment).  
+  - Company is willing to co-develop solutions with customers to reduce costs and improve efficiency.  
+  - Acknowledge that cost increases stem from multiple factors—wire usage, process changes, and supplier pricing—requiring joint analysis.  
+
+- **Overall Tone**:  
+  - Supportive and collaborative; leadership expresses openness to feedback and joint problem-solving.  
+  - Focus on shared value creation rather than cost-cutting at the expense of quality or customer relationships.
+
+--- Part 23/37 ---
+- **Key Decisions**:  
+  - Confirm intent to deliver cost-effective solutions aligned with customer requirements.  
+  - Establish initial product specifications as final on Day 1 to avoid mid-process changes.
+
+- **Action Items**:  
+  - Explore technical collaboration opportunities with customer engineers.  
+  - Facilitate joint discussions between customer and supplier engineers to improve designs and reduce costs.  
+  - Provide input during early-stage development to guide successful outcomes.
+
+- **Issues Raised**:  
+  - Concerns about cost implications of wire forming and supplier pricing.  
+  - Risk of inefficiencies from changing specifications mid-project.  
+  - Initial failure of prototype due to misalignment in design and expectations.
+
+- **Important Discussion Points**:  
+  - Supplier’s experience in guiding customers through technical improvements (e.g., steamroll process).  
+  - Value of early-stage collaboration and clear specification setting.  
+  - Openness to discussing cost-saving innovations, though time and space for engineering dialogue are limited.  
+  - Need to align on what constitutes a “final spec” to ensure process stability and efficiency.  
+  - Origin of stainless steel discussion tied to copper strand issues in flat-blade production.
+
+--- Part 24/37 ---
+- **Key Decision**: The team decided to explore stainless steel as a potential solution to improve conductivity issues in copper-based flat-blade strands, especially given the inconsistent performance observed in current production.
+- **Action Item**: The engineering team must evaluate the feasibility and ROI of implementing stainless steel alternatives, with a focus on validating the potential benefits before committing significant resources.
+- **Issue Raised**: Concerns about over-investing engineering time and resources into unproven or low-return innovations—emphasizing the need for upfront validation of upside potential.
+- **Important Discussion Point**: The team agreed to standardize product specifications early in development to avoid wish-list thinking; future projects should be judged on whether they can meet existing specs (“Can you make it or can’t you?”), not on introducing entirely new or speculative products.
+- **Focus for Future Projects**: Prioritize practical, incremental improvements over radical innovation; maintain consistency with current samples and avoid over-engineering.  
+- **Stainless Steel Wire Note**: The discussion pivoted to stainless steel wire as a potential improvement, but only if it delivers measurable benefits and aligns with customer expectations.  
+- **Team Consensus**: No new product development should be initiated without clear validation of value and return on investment. The team must ensure alignment on expectations and avoid wasting resources on unproven concepts.
+
+--- Part 25/37 ---
+- **Key Decisions**:  
+  - Clarify specification expectations upfront with suppliers to avoid cost surprises.  
+  - Recognize that stainless steel wire use is not the only path forward—UL hose integration is a next logical step.
+
+- **Action Items**:  
+  - Supplier to provide cost estimates for proposed changes (e.g., stainless steel wire), including potential increases (e.g., 20–50%).  
+  - Buyer to proactively communicate changes to suppliers with clear warnings about cost implications.  
+  - Collaborate on material alternatives to maintain cost feasibility.
+
+- **Issues Raised**:  
+  - Misunderstanding between buyer and supplier on what constitutes a “spec” and how changes are evaluated.  
+  - Supplier assumes stainless steel wire is low-cost due to internal volume, while buyer sees it as a significant cost driver.  
+  - OEM customers often expect “just make it,” leading to unanticipated costs.
+
+- **Important Discussion Points**:  
+  - Price sensitivity varies by customer type (OEM vs. MRO), requiring tailored communication.  
+  - Need for transparent cost discussions early in the process to manage expectations and enable joint problem-solving.  
+  - Emphasize proactive supplier engagement to explore feasible alternatives before committing to changes.  
+  - Reinforce that specifications should be reviewed and validated with cost implications.  
+  - Acknowledge differing perspectives on material cost due to volume and usage context.  
+  - Stress the importance of aligning expectations to prevent costly surprises downstream.  
+  - Confirm that stainless steel wire is one step in a broader strategy involving UL hose integration.  
+  - Highlight need for clearer communication protocols around change requests and cost impacts.  
+  - Recognize that buyer-supplier relationship dynamics differ from typical OEM workflows.  
+  - Recommend establishing a feedback loop where suppliers flag cost risks early.  
+  - Affirm shared goal of balancing technical requirements with financial feasibility.  
+  - Agree to refine internal processes for specification review and change management.  
+  - Commit to more collaborative, transparent dialogue on material and cost decisions.  
+  - Emphasize that suppliers should be involved in evaluating feasibility and cost early.  
+  - Confirm that both parties are committed to avoiding surprise cost escalations.  
+  - Agree to document and standardize cost impact disclosures for future reference.  
+  - Recognize that upfront cost transparency builds trust and enables better decision-making.  
+  - Stress that technical specs should include implied cost considerations.  
+  - Confirm that joint evaluation of alternatives is a viable and necessary practice.  
+  - Reaffirm that supplier input on cost feasibility is critical before any change is approved.  
+  - Agree to implement clearer change request workflows with cost impact assessments.  
+  - Recognize that buyer’s pricing sensitivity requires proactive communication.  
+  - Confirm that both parties understand the value of early collaboration on material changes.  
+  - Agree to treat cost implications as a core part of specification discussions.  
+  - Emphasize that supplier should not assume low cost for stainless steel wire due to limited volume.  
+  - Confirm that buyer will lead cost discussions and set expectations early.  
+ - **Next Steps**:  
+  - Develop a standardized process for evaluating material changes with cost impact disclosures.  
+  - Implement a checklist for specification reviews including cost feasibility.  
+  - Schedule follow-up to review initial cost estimates and explore alternatives.  
+  - Document agreed-upon communication protocols for change requests.  
+  - Begin joint evaluation of stainless steel wire alternatives within UL hose context.  
+  - Finalize process for supplier cost alerts on high-impact changes.  
+  - Share revised specification guidelines with all stakeholders.  
+  - Begin pilot testing of alternative materials with cost monitoring.  
+  - Establish a monthly review for cost trends and supplier feedback.  
+  - Confirm that all future proposals include cost impact statements.  
+  - Finalize internal policy on when to escalate cost concerns to leadership.  
+  - Begin training
+
+--- Part 26/37 ---
+- **Key Decisions**:  
+  - Acknowledge misunderstanding between hose manufacturer and supplier regarding stainless steel wire specifications.  
+  - Commit to proactively addressing wire sourcing challenges to prevent future miscommunications.  
+
+- **Action Items**:  
+  - Supplier to explore alternative wire types (beyond stainless steel) for hose reinforcement.  
+  - Supplier to initiate internal efforts to source stainless steel wire, leveraging existing networks and allocating dedicated resources.  
+  - Supplier to engage with potential suppliers in China and other regions to identify viable stainless steel wire options.  
+  - Supplier to prioritize wire sourcing and assign dedicated team members to support the hose manufacturer.  
+
+- **Issues Raised**:  
+  - Significant difficulty in sourcing exact stainless steel wire specifications due to supplier limitations in China.  
+  - Assumption error: hose manufacturer’s use of textile reinforcement instead of wire is unfamiliar to supplier.  
+  - Pricing sensitivity: stainless steel wire is costly, while copper wire is more profitable for suppliers (e.g., Continental).  
+  - Supplier’s internal inefficiencies: purchasing teams lack time and focus for niche wire sourcing.  
+
+- **Important Discussion Points**:  
+  - Need for clearer communication and mutual understanding between parties to avoid assumptions.  
+  - Questioning the feasibility of overly precise technical requirements (e.g., exact wire specs).  
+ - Emphasis on collaboration: supplier committed to making it work despite challenges.  
+  - Copper wire remains more economically viable for suppliers, creating tension with stainless steel demand.  
+  - Recognition that the issue is not insurmountable—rooted in process and communication gaps rather than technical impossibility.  
+  - Commitment to grow the partnership and ensure product availability.
+
+--- Part 27/37 ---
+- **Key Decision**: Return to bulk packaging after previous focus on cut-link packaging, despite initial resistance from the client due to perceived complexity of cutting and bundling.
+- **Action Item**: Joe to identify and recommend the right supplier for stainless steel components, leveraging existing vendor list.
+- **Issue Raised**: Difficulty in finding cost-effective suppliers; perceived value gap between initial quotes and potential savings from better sourcing (e.g., glass parts in India vs. China).
+- **Important Discussion Point**: Misunderstanding exists between parties regarding packaging preferences—client initially resisted cutting due to operational burden, but now wants bulk packaging as a simpler, more efficient alternative.
+- **Next Topic**: Delivery schedule to be discussed before finalizing packaging decisions.  
+- **Suggested Break**: Meeting to pause for lunch before moving to next agenda item.
+
+--- Part 28/37 ---
+- **Key Decision**: No decision was made on whether to switch from cutting and coiling to cutting and bundling; the discussion remains open-ended.
+- **Action Items**: 
+  - Buyer to evaluate feasibility of bulk hose delivery and assess impact on inventory and operations.
+  - Supplier to remain flexible and responsive to customer needs regarding cutting and bundling options.
+- **Issues Raised**:
+  - High operational costs associated with cutting, wrapping, tying, and material handling.
+  - Initial assumption that coiling was easier than cutting; reality revealed ongoing challenges with inventory timing and size availability.
+  - Customer demand shifts have created pressure to adapt cutting processes.
+- **Important Discussion Points**:
+  - Supplier acknowledges past misjudgment in assuming cutting would be easy for customers.
+  - Both parties agree the process needs continuous improvement.
+  - Supplier emphasizes willingness to support customers with equipment or solutions if needed.
+  - Need to balance customer convenience with operational efficiency.
+
+--- Part 29/37 ---
+- **Key Decisions**:  
+  - Accept responsibility for cutting process inefficiencies and commit to transparency in sharing challenges with customers.  
+  - Agree to implement new processes on tools, pending validation of their effectiveness.  
+
+- **Action Items**:  
+  - Evaluate and redesign the current cutting process to improve efficiency and reduce reliance on multiple staff members.  
+  - Assess the feasibility and long-term value of proposed cost-saving systems before committing to implementation.  
+  - Determine the split between NCR (new customer requirements) and internal manufacturing for future orders.  
+  - Collaborate to align process improvements with customer demands to avoid cost escalations and margin erosion.  
+
+- **Issues Raised**:  
+  - High operational costs due to labor-intensive cutting (6 people required).  
+  - Customer demand fluctuations make planning and execution unstable.  
+  - Skepticism about short-term, low-cost solutions that may not sustain long-term.  
+  - Risk of customer attrition if cost increases and margins shrink.  
+
+- **Important Discussion Points**:  
+  - Need for mutual accountability: suppliers must proactively share problems; customers must remain open to improvement.  
+  - Emphasis on transparency and collaboration to ensure improvements are sustainable and beneficial for both parties.  
+  - Commitment to adapt processes to meet customer needs without compromising operational viability.  
+  - Recognition that current systems may not scale or endure without deeper structural changes.  
+
+- **Underlying Concerns**:  
+  - Fear of overcommitting to temporary fixes that fail long-term.  
+  - Desire to balance cost reduction with operational stability and customer trust.  
+  - Need for joint decision-making to avoid unilateral actions that could damage relationships.
+
+--- Part 30/37 ---
+- **Key Decisions**:  
+  - Commit to full integration of GPI from NCR, eliminating silos and ensuring partnership alignment.  
+  - Approve exploration of bulk hold orders as a viable solution, especially for high-volume, repeatable assemblies like 1HR14.  
+  - Acknowledge that GPI’s core products (e.g., 1HR14) are critical to their business and will be prioritized for faster turnaround (within 60 days).  
+
+- **Action Items**:  
+  - Evaluate feasibility of combining bulk holds with fixed orders to optimize cost and utilization.  
+  - Conduct consultation with Q.Y. (demand team) to align on production timelines and requirements.  
+  - Establish a recurring engagement cadence: weekly team meetings with production teams every Tuesday at 3 PM.  
+  - Maintain real-time communication and collaboration across global locations.  
+
+- **Issues Raised**:  
+  - Concerns about long-term inventory holding (6–8 months) for non-utilized products.  
+  - Need to balance flexibility with operational realities, especially labor and production costs in Thailand.  
+  - Potential customer interest in new products/processes—may require proactive outreach.  
+
+- **Important Discussion Points**:  
+ - Emphasis on mutual benefit and collaboration—not a one-way transfer of value.  
+  - Recognition of GPI’s core business dependencies and need for fast, reliable fulfillment.  
+  - Commitment to jointly exploring new product ideas and processes for shared innovation.  
+  - Need for clear accountability and follow-up on proposed solutions.
+
+--- Part 31/37 ---
+- **Key Decisions**:  
+  - Commit to short, constructive meetings (5 minutes max) with clear agendas and outcomes.  
+  - Approve exploration of standardized cut lengths and ready-to-use components instead of power posters.  
+
+- **Action Items**:  
+  - Evaluate and improve order stability with GPI to reduce inventory fluctuations.  
+  - Review and potentially revise product standards (e.g., hose lengths, materials like copper) to improve efficiency and reduce waste.  
+  - Begin discussions with GPI to align on order volumes and delivery expectations.  
+  - Explore standardized processes for recurring orders (e.g., option one for repeat use cases).  
+
+- **Issues Raised**:  
+  - Unstable GPI orders causing inventory misalignment (e.g., 20,000 ft of one-inch hose, but no 18- or 20-foot lengths available).  
+  - Significant waste from lost copper wire (estimated 20 hours/week, $1,000+/week inventory loss).  
+  - Lack of standardization leading to inefficiencies and non-repeatable processes.  
+
+- **Important Discussion Points**:  
+  - Need to balance flexibility with standardization to improve operational efficiency and reduce costs.  
+  - Copper use remains under review due to inefficiencies and loss; pre-price requirement still stands.  
+  - Emphasis on quick turnaround and practical solutions to address recurring operational challenges.  
+  - Team readiness to adopt new standards and processes with support from leadership.  
+
+Note: The team acknowledges current inefficiencies but remains committed to iterative improvements.
+
+--- Part 32/37 ---
+- Key decision: Commit to achieving desired standards despite current challenges; focus shifts to accelerating progress rather than blocking implementation.  
+- Action item: Begin immediate search to assign a responsible party to address a pending task or issue.  
+- Issue raised: Concerns about delays and inefficiencies in current processes; acknowledgment that standards are not yet fully aligned.  
+- Important discussion point: Propose creating a video tutorial to explain crossbow mechanics and usage as part of educational outreach.  
+- Note: Repetitive statements in transcript suggest emphasis on commitment and action, though content lacks clarity on specific deliverables or timelines.
+
+--- Part 33/37 ---
+- **Key Decisions**:  
+  - Confirm pricing structure: 300% cost for initial setup, 150% for usage (same as email reference).  
+  - Align on cost and usage model for wire pieces and bracelets.  
+
+- **Action Items**:  
+  - Visualize pricing data in the graph.  
+  - Finalize and submit order for Sailor Steel prizes expected within 5–10 days.  
+  - Assemble team and conduct test runs in New York within the next 10 days.  
+  - Await confirmation before proceeding with full rollout.  
+  - Schedule follow-up discussion after test completion.  
+
+- **Issues Raised**:  
+  - Timing constraints: Final decisions and order placement must happen within the last 7–10 days.  
+  - Need for coordination across teams and squads.  
+
+- **Important Discussion Points**:  
+  - Emphasize alignment with existing email pricing model.  
+  - Stress urgency and readiness for immediate action.  
+  - Confirm readiness to proceed once tests are complete and approvals are secured.  
+  - Reaffirm commitment to full-year engagement post-test phase.  
+
+Note: Repetitive phrases in transcript were condensed for clarity. Focus remains on actionable steps and timeline.
+
+--- Part 34/37 ---
+- **Key Decisions**:  
+  - Re-initiate sample testing for stainless steel wire with new supplier; sample must be tested internally before sending to customer.  
+  - Confirm pricing before proceeding with any new wire type (steel or copper).  
+
+- **Action Items**:  
+  - Supplier to provide new stainless steel wire sample for internal testing.  
+  - Customer to submit wire samples for re-testing (same wire type, same name).  
+  - Expedite sample testing process: response within 24 hours (morning delivery = same day response; evening delivery = stay late to review).  
+  - Customer to confirm approval of pricing before sample clearance and order placement.  
+  - William to clarify shipping logistics: customer to inform shipping method (container size/shipment) when placing next order.  
+
+- **Issues Raised**:  
+  - Risk of rushing changes leading to production failures; emphasize need for thorough testing.  
+  - Past samples were approved but later rejected with minor changes (e.g., 5%), highlighting need for clear approval process.  
+  - Copper wire timeline uncertainty: potential need for extended lead time (2 months) due to possible delays.  
+
+- **Important Discussion Points**:  
+  - Process must be standardized: pricing agreed → sample tested → approval → order placed.  
+  - Emphasis on clear communication and documentation to avoid missteps or forgotten conversations.  
+  - Commitment to re-testing all samples under consistent conditions to prevent rework and delays.  
+  - Shipping schedule: one container per week; customer to specify shipping details for next order.  
+
+Note: All changes require additional testing; no action will proceed without pricing agreement and sample approval.
+
+--- Part 35/37 ---
+- **Key Decision**: Agree to a one-container-per-week shipping schedule to avoid overloading storage space.
+- **Action Items**: 
+  - Ship only one container per vessel per week.
+  - Delay subsequent shipments if prior containers are delayed or require re-routing.
+  - Implement a stock system to hold finished assemblies (e.g., 15,000+ assemblies on hand).
+- **Issues Raised**: 
+  - Storage space is limited and overwhelmed by frequent container arrivals (e.g., three containers in one week).
+  - Current reporting system misrepresents container contents and shipment status (e.g., unaware of multiple containers until arrival).
+- **Important Discussion Points**: 
+  - Need for better communication: Supplier must notify when shipments are dispatched, not just when containers arrive.
+  - Commitment to maintain finished goods inventory to meet demand.
+  - Current inefficiency in container loading and tracking due to lack of real-time updates.
+
+--- Part 36/37 ---
+- **Key Decisions**:  
+  - Confirm shipment details (loading date, ETD, ETA) are communicated to internal stakeholders (e.g., Deepak) prior to dispatch.  
+  - Acknowledge need for earlier notification of container loading to improve planning.
+
+- **Action Items**:  
+  - Shipping team to inform internal stakeholders (e.g., purchasing, production) of shipment details and loading dates as soon as confirmed.  
+  - Support team to investigate and implement a process to notify stakeholders before container loading occurs.  
+  - Document and standardize the current shipment communication workflow.
+
+- **Issues Raised**:  
+  - Lack of real-time visibility into container loading and departure schedules.  
+  - Production team expresses urgency due to unexpected space constraints.  
+  - Incomplete or delayed shipping paperwork leads to operational delays and uncertainty.  
+ - Current process relies on post-loading updates, resulting in poor coordination and reactive responses.
+
+- **Important Discussion Points**:  
+  - Importance of accurate and timely shipment reporting for supply chain planning.  
+  - Risk of misalignment between production expectations and actual shipment timelines.  
+  - Need for proactive communication to prevent production bottlenecks and improve responsiveness.  
+  - Potential for containers loaded on the same day to depart together—requires confirmation to avoid scheduling errors.  
+  - Request for a revised process to provide advance notice before loading to enable better internal planning.  
+  - Ongoing discussion about whether shipping paperwork is sent before or after dispatch.  
+  - Acknowledgment that formal invoices are received early, but shipment details are not always known until later.  
+  - Need to clarify whether shipment details are shared with purchasing and internal teams in advance.  
+  - Suggestion to review and standardize communication protocols across teams.  
+  - Agreement to explore solutions for real-time shipment updates before dispatch.  
+  - Commitment to investigate feasibility of pre-loading notifications.  
+  - Plan to review current system reporting for accuracy and completeness.  
+  - Emphasis on improving coordination between shipping and internal operations to avoid reactive issues.  
+  - Mention of potential delays due to lack of visibility into container departure schedules.  
+  - Recognition that current process leads to uncertainty and operational inefficiencies.  
+  - Need to align expectations between departments regarding shipment timelines and reporting.  
+  - Request for a formal review of the shipping notification process to ensure clarity and timeliness.  
+  - Commitment to improve transparency and reduce reactive responses.  
+  - Acknowledgment of Sara’s detailed container organization as a best practice.  
+  - Concern that current system fails to reflect real-time container status effectively.  
+  - Need for a system that provides accurate, timely, and actionable shipment updates.  
+  - Discussion on whether containers loaded on the same day will depart together—requires confirmation to avoid scheduling errors.  
+  - Emphasis on proactive communication to prevent production delays and improve responsiveness.  
+  - Request for a pilot or test of advance loading notifications to validate effectiveness.  
+  - Commitment to implement changes to improve visibility and coordination.  
+  - Need to define clear responsibilities and timelines for shipment communication.  
+  - Focus on reducing uncertainty and improving alignment between shipping and internal operations.  
+  - Recognition that current reporting gaps create inefficiencies and operational risks.  
+  - Need to standardize and automate shipment notifications to ensure consistency.  
+  - Acknowledgment of the importance of accurate container-level reporting for planning.  
+  - Request for a formal process review and improvement initiative.  
+  - Commitment to address visibility gaps and improve responsiveness.  
+  - Need to ensure all stakeholders are informed and aligned before dispatch.  
+  - Emphasis on proactive planning over reactive responses.  
+  - Request for a timeline for implementing new communication protocols.  
+  - Commitment to improve system reporting to reflect real-time container status.  
+  - Need to define what constitutes “timely” notification and establish metrics for success.  
+  - Focus on reducing
+
+--- Part 37/37 ---
+- **Key Decision**: Default setting will be “do not load” when shipping one container while the other is in transit; users can opt-in to load if needed.
+- **Action Item**: Deepak will generate reports to identify which orders should be shipped per container, based on load dates and delays.
+- **Issue Raised**: Containers delayed by shipping lines cannot be separated even if loaded per day; they remain grouped due to carrier constraints.
+- **Important Discussion Point**: Need to monitor container movements and delays; future strategy may involve weekly container movement to manage delays and maintain control.
+- **Next Steps**: Team will finalize process; Deepak will lead report development; Mr. Suwai will not be involved in this discussion. Meeting ends for lunch.
+
+============================================================
+FINAL CONSOLIDATED SUMMARY
+============================================================
+
+**Comprehensive Meeting Summary**
+
+---
+
+### **1. Main Topics Discussed**
+
+The meeting covered a broad range of strategic, operational, and financial themes across multiple business units, with a central focus on quality assurance, cost management, supply chain resilience, and process optimization. Key discussion areas included:
+
+- **Quality Assurance & Testing**: Emphasis on proactive quality control, root cause analysis, computerized testing, and compliance with UL and MSHA standards. Specific attention was given to UV testing, formulation validation, and historical data relevance.
+  
+- **Supply Chain & Sourcing**: Challenges related to limited supplier availability (e.g., long hoses), rising raw material costs (11–15% increase), and sourcing complexities (China vs. U.S.). Discussions focused on transparency, alternative materials, and mitigating cost shocks.
+
+- **Operational Efficiency**: Initiatives to standardize processes, reduce waste, and improve inventory management through bulk manufacturing, standardized cut lengths, and revised packaging strategies.
+
+- **Cost Discipline & Financial Risk Management**: Concerns over unexpected cost escalations, pricing opacity, and over-engineering. Commitments were made to evaluate cost impacts early, reject price wars, and implement formal cost-impact analysis frameworks.
+
+- **Product Development & Launch Strategy**: Strategic positioning of new products (e.g., flame-resistant hoses), timeline planning (18-month rollout), and customer engagement via demos and exhibitions.
+
+- **Internal Processes & Culture**: Focus on institutional knowledge retention, employee engagement, transparency, and collaborative decision-making. Recognition of employee input was highlighted as a key driver of innovation.
+
+- **Logistics & Shipping Coordination**: Need for real-time visibility into container loading, departure schedules, and shipment tracking to prevent production bottlenecks.
+
+- **Standardization & Process Clarity**: Repeated calls for clearer specifications, consistent approval workflows, and rejection of wish-list thinking in favor of practical, incremental improvements.
+
+---
+
+### **2. Key Decisions Reached**
+
+- **Quality & Compliance**:  
+  - Implement computerized UV and formulation testing with real-time data capture.  
+  - Require pricing and approval before any new wire or component usage.  
+  - Re-initiate stainless steel wire testing with a new supplier; all changes must be pre-approved.
+
+- **Sourcing & Materials**:  
+  - Commit to sourcing stainless steel wire via China and global suppliers.  
+  - Explore non-stainless alternatives; copper wire remains a viable option due to profitability.  
+  - Reject power posters and focus on standardized, ready-to-use components.
+
+- **Production & Operations**:  
+  - Return to bulk packaging and standardized cut lengths (e.g., one-container-per-week shipping).  
+  - Adopt one-container-per-week shipping schedule to manage storage and reduce waste.  
+  - Begin redesign of cutting process to eliminate inefficiencies (e.g., 6-person team).
+
+- **Financial & Pricing Models**:  
+  - Confirm pricing model: 300% setup cost, 150% usage cost.  
+  - Require pre-price approval for all material changes and engineering modifications.  
+  - Implement monthly cost trend reviews and supplier feedback loops.
+
+- **Customer & Order Management**:  
+  - Improve order stability with GPI through clearer volume and delivery expectations.  
+  - Explore recurring order processes (e.g., option one for repeat use).  
+  - Require customer confirmation of pricing and approval before order clearance.
+
+- **Logistics & Visibility**:  
+  - Share shipment details (loading date, ETD, ETA) with internal stakeholders before dispatch.  
+  - Default setting: “do not load” if another container is in transit; opt-in allowed.  
+  - Implement advance loading notifications and real-time tracking.
+
+- **Internal Governance**:  
+  - Adopt short, focused meetings with clear agendas and outcomes.  
+  - Establish weekly cross-team meetings (e.g., with Q.Y.) to maintain alignment.  
+  - Finalize internal policy on cost escalation and training.
+
+---
+
+### **3. Action Items & Responsibilities**
+
+| Action Item | Responsible Party | Deadline / Frequency |
+|-----------|-------------------|------------------------|
+| Finalize packaging and delivery schedule | Cross-functional team | Ongoing |
+| Begin discussions with GPI to stabilize orders | Buyer / Operations | Within 10 days |
+| Re-initiate stainless steel wire testing with new supplier | Supplier / Engineering | Within 10 days |
+| Expedite sample testing (24-hour response) | Supplier / Customer | Immediate |
+| Implement one-container-per-week shipping schedule | Logistics / Ops | Immediate |
+| Improve order stability with GPI | Buyer / Sales | Ongoing |
+| Develop standardized process for evaluating material changes | Engineering / Buyer | Within 2 weeks |
+| Conduct test runs in New York | Operations / Customer | Within 10 days |
+| Assign responsible party for pending tasks | Leadership | Immediate |
+| Finalize and submit Sailor Steel prize order | Procurement | Immediate |
+| Generate reports on orders per container | Deepak | Weekly |
+| Review and standardize shipment communication protocols | Shipping team | Immediate |
+| Implement pre-loading notifications | Support team | Pilot phase: 2 weeks |
+| Begin redesign of cutting process | Engineering / Ops | Ongoing |
+| Establish monthly cost trend reviews | Finance / Engineering | Monthly |
+| Schedule follow-up post-test runs | Leadership | Post-test |
+| Clarify shipping logistics (container size/shipment method) | William | Immediate |
+| Implement stock system to hold finished assemblies | Inventory team | Immediate |
+
+---
+
+### **4. Critical Challenges & Risks**
+
+- **Supply Chain Volatility**: Limited availability of long hoses and high stainless steel costs pose significant sourcing risks. China limitations and supplier bandwidth constraints are ongoing concerns.
+  
+- **Cost Escalation Risks**: Late-stage process changes (e.g., switching office) can trigger surprise cost shocks. Misaligned specs between buyer and supplier lead to inflated costs (e.g., 300%

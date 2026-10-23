@@ -50,6 +50,23 @@ def process_agent_query(request_id, userid, question):
                 },
                 'timestamp': time.time()
             }
+
+        elif mode == 5:
+            print("Accident stat mode detected")
+            # 📊 สถิติอุบัติเหตุ — ส่ง search_type ให้ฝั่ง LINE เรนเดอร์เป็น Flex message
+            result_data = {
+                'request_id': request_id,
+                'user_id': userid,
+                'original_query': question,
+                'status': 'completed',
+                'mode': mode,
+                'search_type': 'accident_stat',
+                'data': {
+                    'answer': str(result)
+                },
+                'timestamp': time.time()
+            }
+
         # print('#######################')
         # print(tool_result)
         # print('#######################')
@@ -73,6 +90,8 @@ def process_agent_query(request_id, userid, question):
         
         # POST to your endpoint
         try:
+            print(result_data)
+            print()
             response = requests.post(callback_url, json=result_data, timeout=5)
             
             if response.status_code == 200:

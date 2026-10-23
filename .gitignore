@@ -13,10 +13,12 @@ build/
 
 # ChromaDB persistence (large binary files)
 last_persist_db_qwen_ollama_rev3/
+phone_directory_vectordb/
 for_recovery/backup/last_persist_db_qwen/
 for_recovery/backup/last_persist_db_qwen_ollama_rev2/
 for_recovery/backup/last_persist_db_qwen_ollama_rev2_Prototype/
 for_recovery/backup/last_persist_db_qwen_ollama_rev3_backup/
+unused/Pdf_Video_reading/last_persist_db_qwen_ollama_rev2/
 
 # IDE
 .vscode/
@@ -25,3 +27,12 @@ for_recovery/backup/last_persist_db_qwen_ollama_rev3_backup/
 # OS
 Thumbs.db
 .DS_Store
+
+# Files with DB passwords or LINE token (kept in E:\program\ENVProject)
+.env
+module/db_config.py
+unused/bot_sv.py
+unused/agent_v3.py
+unused/test_first_agent.py
+unused/test_first_agent_aa.py
+for_recovery/backup_file/test_first_agent_bak.py

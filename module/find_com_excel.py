@@ -1,130 +1,81 @@
 import pandas as pd
 from datetime import datetime
 import re
-import json
 from typing import List, Dict, Union, Optional
-from db_config import get_connection
 
+import pandas as pd
+from datetime import datetime
+import re
+from typing import List, Dict, Union, Optional
 
-def search_com_db(keyword: str) -> List[Dict]:
+def load_po_data(excel_file: str = "excel/com_list.xlsx", sheet_name: str = 'Sheet1') -> pd.DataFrame:
     """
-    ค้นหาข้อมูลเครื่องคอมพิวเตอร์จาก database (table com_list)
-    ค้นแบบ partial match ทั้ง Client และ User
+    Load PO data from Excel file or create sample data
     
     Args:
-        keyword: คำค้นหา (ชื่อเครื่อง, ชื่อผู้ใช้, เลข PO)
-    
-    Returns:
-        List of matching records
-    """
-    keyword_str = str(keyword).strip()
-    like_pattern = f"%{keyword_str}%"
-    
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    sql = """
-        SELECT Client, [User], Po_Number, PO_Date
-        FROM com_list
-        WHERE Client LIKE ?
-           OR [User] LIKE ?
-           OR Po_Number LIKE ?
-    """
-    cursor.execute(sql, [like_pattern, like_pattern, like_pattern])
-    
-    columns = [desc[0] for desc in cursor.description]
-    results = []
-    for row in cursor.fetchall():
-        record = {}
-        for col, val in zip(columns, row):
-            record[col] = val
-        # คำนวณอายุเครื่อง
-        if record.get('PO_Date'):
-            record['Age_Formatted'] = calculate_age_formatted(record['PO_Date'])
-            record['Years_Since_PO'] = calculate_years_from_now(record['PO_Date'])
-            record['PO_Date'] = record['PO_Date'].strftime('%Y-%m-%d')
-        else:
-            record['Age_Formatted'] = 'ไม่ทราบ'
-            record['Years_Since_PO'] = 0.0
-            record['PO_Date'] = 'ไม่ทราบ'
-        results.append(record)
-    
-    cursor.close()
-    conn.close()
-    
-    return results
-
-
-def search_po_json(query: str, excel_file: str = None) -> str:
-    """
-    ค้นหาข้อมูลเครื่องคอมพิวเตอร์ (ใช้ DB แทน Excel)
-    
-    Args:
-        query: คำค้นหา
-        excel_file: (ไม่ใช้แล้ว เก็บไว้ backward compatible)
-    
-    Returns:
-        JSON string with search results
-    """
-    try:
-        results = search_com_db(query)
+        excel_file: Path to Excel file (default: "excel/com_list.xlsx")
+        sheet_name: Sheet name in Excel file
         
-        response = {
-            "query": query,
-            "total_results": len(results),
-            "search_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "results": results
-        }
-        
-        return json.dumps(response, indent=2, ensure_ascii=False, default=str)
-        
-    except Exception as e:
-        error_response = {
-            "error": str(e),
-            "query": query,
-            "results": []
-        }
-        return json.dumps(error_response, indent=2)
-
-
-def load_po_data() -> pd.DataFrame:
-    """
-    Load PO data from database (table com_list)
-    
     Returns:
         DataFrame with PO data
     """
     try:
-        print("📂 Loading data from database (com_list)...")
-        conn = get_connection()
-        sql = "SELECT Client, [User], Po_Number, PO_Date FROM com_list"
-        df = pd.read_sql(sql, conn)
-        conn.close()
+        print(f"📂 Loading data from: {excel_file}")
+        df = pd.read_excel(excel_file, sheet_name=sheet_name)
         
         # Display basic info about loaded data
-        print(f"✅ Loaded {len(df)} records from DB")
+        print(f"✅ Loaded {len(df)} records from {sheet_name}")
         print(f"📋 Columns: {list(df.columns)}")
+        
+        # Handle different possible column names for your Excel file
+        column_mapping = {
+            'Po_Number': ['Po Number', 'Po_Number', 'PO Number', 'PO_Number'],
+            'PO_Date': ['PO_Date', 'PO Date', 'Po_Date', 'Po Date', 'Date']
+        }
+        
+        # Standardize column names
+        for standard_name, possible_names in column_mapping.items():
+            for col in df.columns:
+                if col in possible_names:
+                    df = df.rename(columns={col: standard_name})
+                    print(f"🔄 Renamed column '{col}' to '{standard_name}'")
+                    break
         
         # Convert PO_Date to datetime
         if 'PO_Date' in df.columns:
+            print("🔄 Converting PO_Date to datetime...")
             df['PO_Date'] = pd.to_datetime(df['PO_Date'], errors='coerce')
             
+            # Check for invalid dates
             invalid_dates = df['PO_Date'].isna().sum()
             if invalid_dates > 0:
                 print(f"⚠️ Found {invalid_dates} invalid dates")
             
+            # Calculate years from PO_Date to now
+            print("📊 Calculating years since PO...")
             df['Years_Since_PO'] = df['PO_Date'].apply(calculate_years_from_now)
+            
+            # Calculate formatted age (like "2 years 4 months")
+            print("📊 Calculating formatted age...")
             df['Age_Formatted'] = df['PO_Date'].apply(calculate_age_formatted)
         else:
+            print("⚠️ PO_Date column not found, cannot calculate years")
             df['Years_Since_PO'] = 0.0
         
-        print(f"\n📋 Sample data (first 3 rows):")
+        # Display sample data
+        print("\n📋 Sample data (first 3 rows):")
         print(df.head(3).to_string())
         
         return df
         
+    except FileNotFoundError:
+        print(f"❌ File not found: {excel_file}")
+        print("💡 Please make sure 'com_list.xlsx' is in the excel/ directory")
+        print("🔄 Using sample data instead...")
+        return create_sample_data()
+        
     except Exception as e:
-        print(f"❌ Error loading from DB: {e}")
+        print(f"❌ Error loading Excel file: {e}")
         print("🔄 Using sample data instead...")
         return create_sample_data()
 
@@ -387,20 +338,21 @@ def get_po_summary(df: pd.DataFrame = None) -> Dict:
     return summary
 
 # Simple function for easy use with LLM
-def search_po(query: str) -> str:
+def search_po(query: str, excel_file: str = "excel/com_list.xlsx") -> str:
     """
-    Simple function to search PO records from database
+    Simple function to search PO records from com_list.xlsx
     
     Args:
         query: Search term (client, user, or PO number)
+        excel_file: Path to Excel file (default: "excel/com_list.xlsx")
         
     Returns:
         Formatted search results
     """
     try:
-        df = load_po_data()
+        df = load_po_data(excel_file)
         if df.empty:
-            return "❌ No data loaded from DB"
+            return "❌ No data loaded from Excel file"
         
         results = search_po_records(query, df)
         return format_search_results(results)
@@ -408,18 +360,19 @@ def search_po(query: str) -> str:
         return f"❌ Error: {str(e)}"
 
 # Alternative function that returns raw data for LLM processing
-def search_po_data(query: str) -> List[Dict]:
+def search_po_data(query: str, excel_file: str = "excel/com_list.xlsx") -> List[Dict]:
     """
     Search PO records and return raw data (for LLM integration)
     
     Args:
         query: Search term (client, user, or PO number)
+        excel_file: Path to Excel file (default: "excel/com_list.xlsx")
         
     Returns:
         List of dictionaries with matching records
     """
     try:
-        df = load_po_data()
+        df = load_po_data(excel_file)
         if df.empty:
             return []
         
@@ -429,37 +382,77 @@ def search_po_data(query: str) -> List[Dict]:
         print(f"❌ Error: {str(e)}")
         return []
 
-def get_db_info() -> Dict:
+def search_po_json(query: str, excel_file: str = "excel/com_list.xlsx") -> str:
     """
-    Get information about com_list table in database
+    Search PO records and return results as JSON string
     
+    Args:
+        query: Search term (client, user, or PO number)
+        excel_file: Path to Excel file (default: "excel/com_list.xlsx")
+        
     Returns:
-        Information about the database table
+        JSON string with search results
+    """
+    import json
+    
+    try:
+        df = load_po_data(excel_file)
+        if df.empty:
+            return json.dumps({"error": "No data loaded from Excel file", "results": []}, indent=2)
+        
+        results = search_po_records(query, df)
+        
+        # Create a structured JSON response
+        response = {
+            "query": query,
+            "total_results": len(results),
+            "search_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "results": results
+        }
+        
+        return json.dumps(response, indent=2, ensure_ascii=False)
+        
+    except Exception as e:
+        error_response = {
+            "error": str(e),
+            "query": query,
+            "results": []
+        }
+        return json.dumps(error_response, indent=2)
+
+def get_excel_info(excel_file: str = "excel/com_list.xlsx") -> Dict:
+    """
+    Get information about Excel file structure
+    
+    Args:
+        excel_file: Path to Excel file
+        
+    Returns:
+        Information about the Excel file
     """
     try:
-        conn = get_connection()
-        cursor = conn.cursor()
-        
-        # Get row count
-        cursor.execute("SELECT COUNT(*) FROM com_list")
-        row_count = cursor.fetchone()[0]
-        
-        # Get column info
-        cursor.execute("SELECT TOP 2 Client, [User], Po_Number, PO_Date FROM com_list")
-        columns = [desc[0] for desc in cursor.description]
-        sample_rows = []
-        for row in cursor.fetchall():
-            sample_rows.append(dict(zip(columns, [str(v) for v in row])))
-        
-        cursor.close()
-        conn.close()
+        # Get sheet names
+        excel_file_obj = pd.ExcelFile(excel_file)
+        sheet_names = excel_file_obj.sheet_names
         
         info = {
-            'source': 'database (PhoneDB.com_list)',
-            'row_count': row_count,
-            'columns': columns,
-            'sample_data': sample_rows
+            'file_path': excel_file,
+            'sheet_names': sheet_names,
+            'sheets_info': {}
         }
+        
+        # Get info for each sheet
+        for sheet in sheet_names:
+            try:
+                df = pd.read_excel(excel_file, sheet_name=sheet, nrows=5)  # Read only first 5 rows
+                info['sheets_info'][sheet] = {
+                    'columns': list(df.columns),
+                    'row_count': len(df),
+                    'sample_data': df.head(2).to_dict('records')
+                }
+            except Exception as e:
+                info['sheets_info'][sheet] = {'error': str(e)}
+        
         return info
         
     except Exception as e:
@@ -467,12 +460,12 @@ def get_db_info() -> Dict:
 
 # Demo function
 def demo_po_search():
-    """Demonstrate the PO search functionality with database"""
-    print("🔍 PO Search System Demo - Database")
+    """Demonstrate the PO search functionality with com_list.xlsx"""
+    print("🔍 PO Search System Demo - com_list.xlsx")
     print("=" * 50)
     
-    # Load data from database
-    df = load_po_data()
+    # Load data from com_list.xlsx
+    df = load_po_data("excel/com_list.xlsx")
     
     if df.empty:
         print("❌ No data loaded")
@@ -541,13 +534,28 @@ def test_search_functions():
         print(json_result[:300] + "..." if len(json_result) > 300 else json_result)
 
 if __name__ == "__main__":
-    print("🔍 PO Search System - Database Mode")
-    demo_po_search()
+    # Check if Excel file exists
+    import os
+    
+    excel_path = "excel/com_list.xlsx"
+    if os.path.exists(excel_path):
+        print("✅ Found excel/com_list.xlsx")
+        demo_po_search()
+    else:
+        print("❌ excel/com_list.xlsx not found")
+        print("📁 Current directory contents:")
+        files = [f for f in os.listdir('.') if f.endswith(('.xlsx', '.xls', '.csv'))]
+        if files:
+            print(f"Found these data files: {files}")
+        else:
+            print("No Excel/CSV files found")
+        print("\n🔄 Running demo with sample data...")
+        demo_po_search()
     
     # Interactive mode
     print("\n🎯 Interactive Search Mode")
     print("Enter search terms (client, user, or PO number) or 'exit' to quit")
-    print("Commands: 'test' - run tests, 'info' - show DB info, 'json <query>' - get JSON result")
+    print("Commands: 'test' - run tests, 'info' - show Excel info, 'json <query>' - get JSON result")
     
     while True:
         query = input("\n🔍 Search: ").strip()
@@ -558,8 +566,8 @@ if __name__ == "__main__":
         elif query.lower() == 'test':
             test_search_functions()
         elif query.lower() == 'info':
-            info = get_db_info()
-            print(f"📊 DB Info: {info}")
+            info = get_excel_info()
+            print(f"📊 Excel Info: {info}")
         elif query.lower().startswith('json '):
             # Extract the actual query after 'json '
             actual_query = query[5:].strip()

@@ -1,10 +1,16 @@
-from langchain_ollama import OllamaLLM
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.llms import Ollama
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from langchain_core.prompts import PromptTemplate
+from langchain.prompts import PromptTemplate
 # from phone_search_exact import search_phone
-from phone_search_partial import search_phone
-from find_com_excel import search_po_json
+try:
+    from module.phone_search_partial import search_phone
+    from module.find_com_excel import search_po_json
+    from module.incident_search import search_incident
+except ModuleNotFoundError:
+    from phone_search_partial import search_phone
+    from find_com_excel import search_po_json
+    from incident_search import search_incident
 _embedding = None
 _vectordb = None
 _vectordb_phone = None
@@ -12,12 +18,12 @@ _llm = None
 persist_directory = "last_persist_db_qwen_ollama_rev3"
 persist_directory_phone = "phone_directory_vectordb"
 all_link = []
-#llm_model ="scb10x/llama3.1-typhoon2-8b-instruct:latest"
-llm_model = "scb10x/typhoon2.5-qwen3-4b:latest"
+llm_model ="scb10x/llama3.1-typhoon2-8b-instruct:latest"
+# llm_model = "scb10x/typhoon2.5-qwen3-4b:latest"
 # llm_model = "scb10x/typhoon2.1-gemma3-12b:latest"
-base_url="http://10.10.1.10:11434"
+base_url="http://127.0.0.1:11434"
 
-define_intension_user_prompt = """วิเคราะห์และจัดประเภทคำถาม ตอบเฉพาะตัวเลข 1, 2, 3, หรือ 4:
+define_intension_user_prompt = """วิเคราะห์และจัดประเภทคำถาม ตอบเฉพาะตัวเลข 1, 2, 3, 4, หรือ 5:
 
 ประเภท 1: การสนทนาทั่วไป
 - คำทักทาย: "สวัสดี", "หวัดดี", "ดีครับ"
@@ -30,6 +36,9 @@ define_intension_user_prompt = """วิเคราะห์และจัด�
 - เบอร์แผนก: "เบอร์ฝ่ายบุคคล", "เบอร์ธุรการ", "เบอร์ ICT"
 - เบอร์สถานที่: "เบอร์ระยอง", "เบอร์กรุงเทพ", "เบอร์สาขา"
 - คำสำคัญ: "เบอร์", "โทร", "ติดต่อ", "หมายเลข", "โทรศัพท์" 
+- คำถามตัวอย่าง: "ขอเบอร์โทรของคุณทองสร้อย", "หาเบอร์ของพี่ AW", "ขอเบอร์ฝ่ายธุรการ", 
+"เบอร์ผู้จัดการ", "ขอเบอร์สาขาระยอง", "ขอเบอร์ SPS", "สถานีตำรวจ", "ขอเบอร์พี่ก้องกับพี่แอน", 
+"เบอร์คุณสมชายและคุณสมหญิง", "หาเบอร์ ICT กับ ธุรการ", "ขอเบอร์พี่ต้นแล้วก็พี่ใหม่", "เบอร์พี่ก้อง พี่แอน พี่ต้น"
 
 ประเภท 3: คำถามเทคนิค/เอกสาร/ปฏิทิน
 - ปัญหาคอมพิวเตอร์: "คอมช้า", "เปิดไม่ได้", "หน้าจอดับ"
@@ -44,9 +53,16 @@ define_intension_user_prompt = """วิเคราะห์และจัด�
 - ข้อมูลเครื่อง: "ชื่อเครื่อง", "สเปค", "รายละเอียดเครื่อง"
 - ตัวอย่าง: "อายุเครื่อง NBK649", "รหัสเครื่องของสมชาย"
 
+ประเภท 5: สถิติอุบัติเหตุ/ข้อมูลอุบัติเหตุ (incident/accident)
+- ขอสถิติรวมทั้งหมด: "ขอดูสถิติอุบัติเหตุ", "สถิติอุบัติเหตุ", "อุบัติเหตุทั้งหมด", "สรุปอุบัติเหตุ", "อุบัติเหตุมีกี่ครั้ง"
+- ขอแยกตามแผนก: "สถิติอุบัติเหตุ แผนก...", "อุบัติเหตุแผนกผลิต", "อุบัติเหตุของแผนก LLH", "สถิติอุบัติเหตุแผนก Compound"
+- คำสำคัญ: "อุบัติเหตุ", "สถิติอุบัติเหตุ", "incident", "accident", "เหตุการณ์", "บาดเจ็บ"
+- ตัวอย่าง: "ขอดูสถิติอุบัติเหตุ", "สถิติอุบัติเหตุแผนกผลิต 1", "อุบัติเหตุแผนก MBH มีกี่ครั้ง"
+- เปรียบเทียบคำเช่น : "แผนกสายยาง = LLH","แผนกท่อ,ท่อ = MBH","แผนกคอมพาวด์,คอมพาวด์ = Compound","บีเฮดพี = BHP","แผนกผลิต = Production","แผนก ICT = ICT","แผนกธุรการ = Admin","แผนกบุคคล,ทรัพยากรบุคคล = HR,"
 
 
-ตอบเฉพาะตัวเลข 1, 2, 3, หรือ 4
+
+ตอบเฉพาะตัวเลข 1, 2, 3, 4, หรือ 5
 คำถาม: """
 
 talking_prompt = """ system_promt: 
@@ -60,10 +76,10 @@ talking_prompt = """ system_promt:
                         - สามารถพูดคุยเล่นได้นิดหน่อย
 Goal:
     -พยายามชวนให้คุยกับผู้ใช้ให้มากที่สุดเท่าที่จะทำได้
-    -พยายามให้ผู้ใช้รู้สึกสบายใจและเป็นกันเองห
+    -พยายามให้ผู้ใช้รู้สึกสบายใจและเป็นกันเอง
     -พยายามถามเรื่องเกี่ยวกับงานที่ผู้ใช้ทำอยู่(อาจจะไม่เกี่ยวกับ ICT ก็ได้)
     -ตอบกลับเป็นภาษาไทย นอกจากว่าผู้ใช้จะถามเป็นภาษาอังกฤษ
-    -
+    -ห้ามพูดคำหยาบโดยเด็ดขาด
 query : """
 
 define_user_need_in_rag = """วิเคราะห์ประเภทคำถามและแยกความต้องการของผู้ใช้:
@@ -103,15 +119,6 @@ define_user_input = """วิเคราะห์คำถามของผู
 - "แก้ปัญหา Outlook ไม่เปิด" → Outlook ไม่เปิด
 - "ขอเบอร์ SPS" → SPS
 - "สถานีตำรวจ" → ตำรวจ
-- "ขอเบอร์พี่ก้องกับพี่แอน" → ก้อง|แอน
-- "เบอร์คุณสมชายและคุณสมหญิง" → สมชาย|สมหญิง
-- "หาเบอร์ ICT กับ ธุรการ" → ICT|ธุรการ
-- "ขอเบอร์พี่ต้นแล้วก็พี่ใหม่" → ต้น|ใหม่
-- "เบอร์พี่ก้อง พี่แอน พี่ต้น" → ก้อง|แอน|ต้น
-
-กฎเพิ่มเติม:
-- ถ้ามีหลายชื่อหรือหลายคำค้นหา ให้คั่นด้วยเครื่องหมาย | (pipe)
-- ถ้ามีคำว่า "กับ", "และ", "แล้วก็", "with", "and" แสดงว่ามีหลายคำค้นหา ให้แยกด้วย |
 
 ข้อห้าม:
 - ห้ามเปลี่ยนคำ จาก SPS เป็น SPES แบบนี้ผิดกฎนะครับ
@@ -138,12 +145,12 @@ def get_llm():
     global _llm
     if _llm is None:
         print("🔄 โหลด LLM ครั้งแรก...")
-        _llm = OllamaLLM(
+        _llm = Ollama(
             model= llm_model,
             # model = "qwen3:0.6b",
             # model = "llama3:8b",
             # model = "llama3.1:8b",
-            base_url="http://10.10.1.10:11434",
+            base_url="http://127.0.0.1:11434",
             temperature=0.1,
             top_p=0.3,
             top_k=60, 
@@ -157,7 +164,7 @@ def get_embedding():
     global _embedding
     if _embedding is None:
         print("🔄 โหลด embedding model ครั้งแรก...")
-        _embedding = HuggingFaceEmbeddings(model_name="Qwen/Qwen3-Embedding-0.6B", model_kwargs={"device": "cpu"})
+        _embedding = HuggingFaceEmbeddings(model_name="Qwen/Qwen3-Embedding-0.6B", model_kwargs={"device": "cuda"})
         print('✅ embedding model พร้อมใช้งาน')
     return _embedding
 
@@ -378,7 +385,7 @@ def generate_phone_answer(query, results):
 สร้างคำตอบที่เป็นธรรมชาติและเป็นมิตรครับ:"""
     
     try:
-        answer = llm.invoke(phone_answer_prompt)
+        answer = llm(phone_answer_prompt)
         return answer.strip()
     except Exception as e:
         # Fallback to formatted results if LLM fails
@@ -412,18 +419,22 @@ def match_query_with_vector_db(query, results):
 - ไม่ต้องการ (ถ้าแค่ต้องการคำอธิบาย/ข้อมูล)
 
 คำตอบ:"""
-    user_need = llm.invoke(check_need_template)
+    user_need = llm(check_need_template)
     user_need = user_need.strip().lower()
     print(user_need)
     if user_need == "pdf":
         print("🔄 ค้นหาไฟล์ PDF ที่เกี่ยวข้องกับคำถาม...")
-        results = [result for result in results if result.metadata.get("have_pdf", "no") == "yes"]
+        filtered = [result for result in results if result.metadata.get("have_pdf", "no") == "yes"]
+        # ถ้ากรอง PDF แล้วเหลือ 0 ใบ ให้ย้อนกลับไปใช้ผลเดิม อย่าล้างเกลี้ยง
+        results = filtered if filtered else results
     elif user_need == "vdo":
         print("🔄 ค้นหาวีดีโอคลิปที่เกี่ยวข้องกับคำถาม...")
-        results = [result for result in results if result.metadata.get("have_clip", "no") == "yes"]
+        filtered = [result for result in results if result.metadata.get("have_clip", "no") == "yes"]
+        # ถ้ากรอง VDO แล้วเหลือ 0 ใบ ให้ย้อนกลับไปใช้ผลเดิม อย่าล้างเกลี้ยง
+        results = filtered if filtered else results
     else:
         print("🔄 ไม่ต้องการไฟล์ PDF หรือ วีดีโอคลิป")
-    clean_query = llm.invoke(f"""ทำความสะอาดคำถามนี้ให้กระชับและเข้าใจง่ายโดยพยายามตัดพวก PDF หรีอ VDO ออก คำถาม: "{query} """)
+    clean_query = llm(f"""ทำความสะอาดคำถามนี้ให้กระชับและเข้าใจง่ายโดยพยายามตัดพวก PDF หรีอ VDO ออก คำถาม: "{query} """)
     print(clean_query)
     # ✅ แก้ไข: ใช้ template parameter
     prompt_template = PromptTemplate(
@@ -459,7 +470,7 @@ def match_query_with_vector_db(query, results):
                 content_preview=result.metadata.get("pdf_summary", result.metadata.get("summary", result.page_content[:300]))
             )
             
-            response = llm.invoke(prompt)
+            response = llm(prompt)
             print(response)
             response = response.strip().lower()
             
@@ -559,7 +570,7 @@ def generate_fallback_answer(query, non_related_info, llm):
 ข้อความที่ปรับปรุงแล้ว:"""
     
     try:
-        llm_creative = OllamaLLM(
+        llm_creative = Ollama(
             model="scb10x/llama3.1-typhoon2-8b-instruct:latest",
             base_url="http://127.0.0.1:11434",
             temperature=0.3,  # เพิ่มความเป็นธรรมชาติ
@@ -568,7 +579,7 @@ def generate_fallback_answer(query, non_related_info, llm):
             num_predict=600,
             num_ctx=8000,
         )
-        improved_answer = llm_creative.invoke(improvement_prompt)
+        improved_answer = llm_creative(improvement_prompt)
         return improved_answer.strip()
     except Exception as e:
         print(f"⚠️ Error improving fallback answer: {e}")
@@ -647,7 +658,7 @@ def generate_final_answer(query, related_docs,non_related_docs):
     
     try:
         
-        answer = llm.invoke(answer_prompt)
+        answer = llm(answer_prompt)
         
         # เพิ่ม resources ถ้ามี
         if resources:
@@ -680,7 +691,7 @@ def generate_final_answer_json(query,json_data):
         ถ้าไม่เจอคำตอบในเนื้อหา ให้ตอบว่า "ผมไม่มั่นใจว่า นี่ใช่เครื่องที่คุณต้องการค้นหารึเปล่า ถ้าไม่ใช่หรือยังแก้ปัญหาไม่ได้ คุณสามารถติดต่อฝ่าย ICT ได้ที่เบอร์ 601(ระยอง) หรือ 145(กรุงเทพ) เพื่อขอความช่วยเหลือเพิ่มเติม"
         คำตอบ:"""
     try:
-        answer = llm.invoke(answer_prompt)
+        answer = llm(answer_prompt)
         
 
         return answer.strip()
@@ -766,17 +777,23 @@ def process_query(query):
         return
     
     try:
-        typing_llm = OllamaLLM(
+        typing_llm = Ollama(
             model= llm_model,
             base_url=base_url,
             temperature=0.1,
             num_predict=50,
             
         )
-        if 'we can' in query.lower():
+        _ql = query.lower()
+        _accident = any(w in _ql for w in ['อุบัติเหตุ', 'accident', 'incident'])
+        _stat = any(w in _ql for w in ['สถิติ', 'สรุป', 'รายงาน', 'กี่ครั้ง', 'กี่คน', 'แผนก', 'เดือน', 'ทั้งหมด', 'report', 'stat'])
+        # 📊 บังคับ intent สถิติอุบัติเหตุ (LLM ไม่แน่นอนกับคำสั้นๆ) — ตั้งเป็น string '5' ให้ re.findall ด้านล่างอ่านได้
+        if 'สถิติอุบัติเหตุ' in _ql or (_accident and _stat):
+            type_query = '5'
+        elif 'we can' in _ql:
             type_query = 3
         else:
-            type_query = typing_llm.invoke(define_intension_user_prompt + query +'ตอบเฉพาะตัวเลข 1, 2, 3, หรือ 4'+ "\nคำตอบ ประเภทที่:")
+            type_query = typing_llm(define_intension_user_prompt + query +'ตอบเฉพาะตัวเลข 1, 2, 3, 4, หรือ 5'+ "\nคำตอบ ประเภทที่:")
             type_query = type_query.strip()
         import re
         numbers = re.findall(r'\d+', type_query)
@@ -795,15 +812,16 @@ def process_query(query):
     #         db_mode = 2
     #     return f"🔄 ต้องการเปลี่ยนค้นหา"
     if type_query == 1:
-        talking_llm = OllamaLLM(
+        talking_llm = Ollama(
             model= llm_model,
             base_url=base_url,
             temperature=0.8,
             num_predict=300,
             num_ctx=10000,
         )
-        final_answer = talking_llm.invoke(talking_prompt + query)
+        final_answer = talking_llm(talking_prompt + query)
         mode = 1
+        print('#####TEST############')
         return final_answer, '',mode
     elif type_query == 2:
         # 🔥 Enhanced phone search for NCR directory
@@ -818,6 +836,7 @@ def process_query(query):
         # print("📞 ข้อมูลการติดต่อ NCR:")
         # print(final_answer)
         # print("="*60)
+        original_query = query  # เก็บคำถามเดิมไว้เผื่อ fallback ไป RAG (คงคำว่า email ไว้)
         ignore_word_list = ['ด่วน','สถานี','email','e-mail','อีเมล','อีเมลล์','Email','E-mail']
         for word in ignore_word_list:
             query=query.replace(word,'')
@@ -850,25 +869,42 @@ def process_query(query):
         else:
             final_answer = search_phone(clean_input)
 
-        mode = 2
-        return final_answer, '',mode
-    elif type_query == 4:
-        clean_input = typing_llm.invoke(define_user_input_com + query + "\nคำค้นหา:")
-        clean_input = clean_search_input(clean_input)
-        print(f"🔍 คำค้นหาเครื่อง: {clean_input}")
-        data = search_po_json(clean_input)
-        if data:
-            final_answer = generate_final_answer_json(query, data)
-            mode = 4
-            return final_answer, '', mode
-        else:
-            mode = 4
-            return "ขอโทษครับ ไม่พบข้อมูลเครื่องคอมพิวเตอร์ที่ค้นหาครับ", '', mode
-    else:
+        # ถ้าค้นเบอร์เจอ → ตอบแบบเบอร์โทรตามเดิม
+        if final_answer:
+            mode = 2
+            return final_answer, '',mode
+
+        # ค้นเบอร์ไม่เจอ → fallback ไปลอง RAG (เอกสาร) ต่อ กันกรณีจำแนกประเภทพลาด
+        print("⚠️ ค้นเบอร์ไม่เจอ → fallback ไปค้นเอกสาร (RAG) ต่อ")
+        query = original_query
+        type_query = 3
+    # elif type_query == 4:
+    #     clean_input = typing_llm(define_user_input_com + query + "\nคำค้นหา:")
+    #     clean_input = clean_search_input(clean_input)
+    #     print(clean_input)
+    #     data = search_po_json(clean_input)
+    #     if data:
+    #         llm = get_llm()
+    #         final_answer = llm(f"คำถาม: {query}\n\nข้อมูลที่พบ:\n{data}\n\nสร้างคำตอบที่เป็นธรรมชาติและเป็นมิตรครับ:")
+    #         final_answer = final_answer.strip()
+    #         mode = 4
+
+    #         return final_answer, '',mode
+    if type_query == 5:
+        # 📊 สถิติอุบัติเหตุ (DB: NCR_iBot_Live, ตาราง incidents)
+        mode = 5
+        final_answer = search_incident(query)
+        print("\n" + "="*60)
+        print("📊 สถิติอุบัติเหตุ:")
+        print(final_answer)
+        print("="*60)
+        return final_answer, '', mode
+
+    if type_query == 3:
         try:
             mode = 3
             search =''
-            need_all = typing_llm.invoke(define_user_need_in_rag+query+"คำคอบ: ")
+            need_all = typing_llm(define_user_need_in_rag+query+"คำคอบ: ")
             numbers = re.findall(r'\d+', need_all)
             if numbers[0] == '1':
                 if 'p2a' in query.lower():
@@ -893,7 +929,13 @@ def process_query(query):
                 print("\n🤖 กำลังใช้ LLM กรองข้อมูล...")
                 related_docs = match_query_with_vector_db(query, results)
                 print(f"🎯 พบเอกสารที่เกี่ยวข้อง {len(related_docs)} รายการ")
-                
+
+                # 🛟 Safety net: การันตีว่าใบที่ vector ให้คะแนนตรงสุด (อันดับ 1)
+                # จะอยู่ในคำตอบเสมอ แม้ตัวกรอง LLM จะตอบ NO แล้วตัดทิ้งไป
+                if results and results[0] not in related_docs:
+                    print("🛟 นำเอกสารอันดับ 1 (คะแนนตรงสุด) กลับเข้ามา แม้ LLM ตัดทิ้ง")
+                    related_docs = [results[0]] + related_docs
+
                 related_docs = remove_duplicate_resources(related_docs)
                 
                 if related_docs:
@@ -913,7 +955,7 @@ def process_query(query):
                             topic_number += 1
                         #จัดเรียงเอกสารใน related_docs ใหม่
                         sorted_promt = "จากหัวข้อต่อไปนี้\n" + text_all_topic + " จงเลือกหัวข้อที่ตรงกับคำถามมากที่สุด\n" +'คำถามคือ:\n'+ query + "\nให้ตอบเป็นตัวเลขเท่่านั้น"
-                        topic_choice = typing_llm.invoke(sorted_promt + "\nคำตอบคือเลข: ")
+                        topic_choice = typing_llm(sorted_promt + "\nคำตอบคือเลข: ")
                         print('LLMเลือก:')
                         print(topic_choice)
                         print('#'*50)

@@ -1,0 +1,1 @@
+D: &&cd D:\LLM\NCR_CHATBOT && python bot_sv-rev2.py

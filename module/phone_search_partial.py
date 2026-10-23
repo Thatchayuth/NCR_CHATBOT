@@ -1,5 +1,9 @@
+import re
 import pyodbc
-from db_config import get_connection
+try:
+    from module.db_config import get_connection
+except ModuleNotFoundError:
+    from db_config import get_connection
 
 # Mapping คอลัมน์ SQL -> ชื่อแสดงผล (ไทย)
 DISPLAY_MAP = {
@@ -29,46 +33,81 @@ def _rows_to_records(cursor):
         records.append(record)
     return records
 
+# NCR_Phonebook เก็บข้อมูลแบบ normalize หลายตาราง (ไม่มี all_phone แล้ว)
+# query ทั้งหมดจึง join ตารางเหล่านี้แล้ว alias คอลัมน์ให้ตรงกับชื่อเดิมใน DISPLAY_MAP
+_BASE_SQL = """
+    SELECT
+        p.Site AS Site,
+        n.Ext AS Phone,
+        COALESCE(pn.Emergency, NULL) AS UrgentPhone,
+        d.Department_TH AS Department,
+        d.Department_ENG AS DepartmentEN,
+        s.Section_TH AS Section,
+        p.EmployName AS FirstName,
+        p.EmployLastName AS LastName,
+        p.EmployNickName AS NickName,
+        p.SpecialName AS ShortName,
+        p.Email AS Email,
+        p.Position AS Position
+    FROM Phone_Person p
+    LEFT JOIN Phone_PersonNumber pn ON pn.PersonId = p.UID
+    LEFT JOIN Phone_Number n ON n.UID = pn.NumberId
+    LEFT JOIN Phone_PersonDept pd ON pd.PersonId = p.UID
+    LEFT JOIN MasDepartment d ON d.UID = pd.DepartmentId
+    LEFT JOIN MasSection s ON s.UID = pd.SectionId
+    WHERE p.Isactive = 1
+"""
+
+_SEARCH_FIELDS = [
+    "p.Site",
+    "n.Ext",
+    "COALESCE(pn.Emergency, NULL)",
+    "d.Department_TH",
+    "d.Department_ENG",
+    "s.Section_TH",
+    "p.EmployName",
+    "p.EmployNickName",
+    "p.SpecialName",
+    "p.Position",
+]
+
 def search_phone(keyword):
     """
-    Search for a keyword across all fields in the database (partial match)
+    Search for one or more keywords across all fields in the database (partial match)
+    รองรับหลายรายชื่อพร้อมกัน โดยคั่นด้วย , หรือ | เช่น "ทองสร้อย, เต๋า"
     Returns a list of matching records (dictionaries)
     ค้นหาจากทุกคอลัมน์ ยกเว้น Email และ LastName (เหมือนเดิม)
     """
     print(keyword)
     print('#' * 80)
-    
-    keyword_str = str(keyword).strip()
-    like_pattern = f"%{keyword_str}%"
-    
+
+    terms = [t.strip() for t in re.split(r'[,|]', str(keyword)) if t.strip()]
+    if not terms:
+        terms = [str(keyword).strip()]
+
     conn = get_connection()
     cursor = conn.cursor()
-    
+
     # ค้นหาแบบ partial match ทุกคอลัมน์ ยกเว้น Email, LastName
-    sql = """
-        SELECT Site, Phone, UrgentPhone, Department, DepartmentEN, Section,
-               FirstName, LastName, NickName, ShortName, Email, Position
-        FROM all_phone
-        WHERE Site LIKE ?
-           OR Phone LIKE ?
-           OR UrgentPhone LIKE ?
-           OR Department LIKE ?
-           OR DepartmentEN LIKE ?
-           OR Section LIKE ?
-           OR FirstName LIKE ?
-           OR NickName LIKE ?
-           OR ShortName LIKE ?
-           OR Position LIKE ?
-    """
-    params = [like_pattern] * 10
+    # แต่ละ term เป็นกลุ่ม OR ของทุกคอลัมน์ แล้ว OR รวมกันระหว่าง term
+    group_sql = "(" + " OR ".join(f"{field} LIKE ?" for field in _SEARCH_FIELDS) + ")"
+    where_clause = " OR ".join([group_sql] * len(terms))
+    sql = _BASE_SQL + f" AND ({where_clause})"
+
+    params = []
+    for term in terms:
+        like_pattern = f"%{term}%"
+        params.extend([like_pattern] * len(_SEARCH_FIELDS))
+
     cursor.execute(sql, params)
     results = _rows_to_records(cursor)
-    
+
     cursor.close()
     conn.close()
-    
+
+    terms_display = ', '.join(terms)
     if len(results) > 0:
-        print(f"Found {len(results)} matching rows for keyword '{keyword_str}':")
+        print(f"Found {len(results)} matching rows for keyword(s) '{terms_display}':")
         print("=" * 80)
         for i, record in enumerate(results):
             print(f"Record {i + 1}:")
@@ -78,7 +117,7 @@ def search_phone(keyword):
             print("-" * 40)
         return results
     else:
-        print(f"No matches found for keyword '{keyword_str}'")
+        print(f"No matches found for keyword(s) '{terms_display}'")
         return []
 
 def search_phone_specific(phone):
@@ -89,16 +128,13 @@ def search_phone_specific(phone):
     conn = get_connection()
     cursor = conn.cursor()
     phone_str = str(phone).strip()
-    
-    sql = """
-        SELECT Site, Phone, UrgentPhone, Department, DepartmentEN, Section,
-               FirstName, LastName, NickName, ShortName, Email, Position
-        FROM all_phone
-        WHERE Phone = ? OR UrgentPhone = ?
+
+    sql = _BASE_SQL + """
+        AND (n.Ext = ? OR COALESCE(pn.Emergency, n.Emergency) = ?)
     """
     cursor.execute(sql, [phone_str, phone_str])
     results = _rows_to_records(cursor)
-    
+
     cursor.close()
     conn.close()
     return results
@@ -111,16 +147,13 @@ def search_phone_exact(phone):
     conn = get_connection()
     cursor = conn.cursor()
     phone_str = str(phone).strip()
-    
-    sql = """
-        SELECT Site, Phone, UrgentPhone, Department, DepartmentEN, Section,
-               FirstName, LastName, NickName, ShortName, Email, Position
-        FROM all_phone
-        WHERE Phone = ? OR UrgentPhone = ? OR Email = ?
+
+    sql = _BASE_SQL + """
+        AND (n.Ext = ? OR COALESCE(pn.Emergency, n.Emergency) = ? OR p.Email = ?)
     """
     cursor.execute(sql, [phone_str, phone_str, phone_str])
     results = _rows_to_records(cursor)
-    
+
     cursor.close()
     conn.close()
     return results

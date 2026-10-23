@@ -1,7 +1,7 @@
 import fitz  # สำหรับอ่าน PDF
 import whisper
-from langchain_ollama import OllamaLLM
-from langchain_core.prompts import PromptTemplate
+from langchain.llms import Ollama
+from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from docx import Document
 import tempfile
@@ -98,7 +98,7 @@ def transcribe_video_url(url):
 # สรุปข้อความโดยใช้ LLM
 
 def summarize_text(text):
-    llm = OllamaLLM(model="scb10x/llama3.1-typhoon2-8b-instruct:latest")
+    llm = Ollama(model="scb10x/llama3.1-typhoon2-8b-instruct:latest")
     prompt = PromptTemplate.from_template(
         """คุณคือระบบช่วยสร้างข้อมูลสำหรับจัดเก็บในเวกเตอร์ดาต้าเบส (Vector Database) เช่น FAISS หรือ Weaviate
 
